@@ -897,6 +897,27 @@ section { width: 100%; }
   .brand-logo-mark { width: 46px; }
   .footer .brand-logo-mark { width: 54px; }
 }
+
+
+/* Guarantee badge image */
+.guarantee-badge {
+  width: clamp(220px, 24vw, 320px);
+  height: auto;
+}
+.guarantee-badge img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  filter: drop-shadow(0 22px 46px rgba(0,0,0,0.35));
+}
+@media (max-width: 900px) {
+  .guarantee-badge {
+    justify-self: center;
+    margin: 0 auto;
+    width: min(76vw, 300px);
+  }
+}
 `,
   body: `<!-- ══ NAV ══ -->
 <nav class="nav" id="nav">
@@ -1185,7 +1206,7 @@ section { width: 100%; }
       <div class="case-grid">
         <div>
           <div class="case-eyebrow reveal">Client Results</div>
-          <h2 class="reveal reveal-delay-1"><em>18% revenue increase.</em><br>First month. Guaranteed.</h2>
+          <h2 class="reveal reveal-delay-1"><em>18% revenue increase.</em><br>First month.</h2>
           <p class="reveal reveal-delay-2">Le Petit Parisien saw an 18% increase in revenue in their very first month after implementing the ClinovaAI system. No new marketing spend. No new staff. No changes to how they operated.</p>
           <p class="reveal reveal-delay-3">The system simply ensured that every enquiry that previously went unanswered was captured, followed up, and converted. Revenue that was already there - waiting to be collected.</p>
           <p class="reveal reveal-delay-4">This is the consistent pattern we see. Not because ClinovaAI is magic. Because the opportunity was already there. We just stopped it from disappearing.</p>
@@ -1214,18 +1235,7 @@ section { width: 100%; }
 <section class="guarantee" id="guarantee">
   <div class="container">
     <div class="guarantee-inner">
-      <div class="guarantee-badge reveal">
-        <svg viewBox="0 0 180 180" fill="none" width="180" height="180">
-          <circle cx="90" cy="90" r="86" stroke="#0C9E8F" stroke-width="1" opacity="0.3"/>
-          <circle cx="90" cy="90" r="72" stroke="#0C9E8F" stroke-width="1" opacity="0.15"/>
-          <circle cx="90" cy="90" r="58" stroke="#0C9E8F" stroke-width="1.5" fill="rgba(12,158,143,0.04)"/>
-          <text x="90" y="82" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#0C9E8F" letter-spacing="2">30-DAY</text>
-          <text x="90" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#0C9E8F" letter-spacing="2">RESULTS</text>
-          <text x="90" y="122" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#0C9E8F" letter-spacing="2">GUARANTEE</text>
-          <circle cx="90" cy="56" r="3" fill="#B8935A"/>
-          <circle cx="90" cy="140" r="3" fill="#B8935A"/>
-        </svg>
-      </div>
+      <div class="guarantee-badge reveal"><img src="/brand/30dayguarantee.png" alt="30-day results guarantee" width="320" height="320"></div>
       <div class="guarantee-copy">
         <div class="eyebrow reveal">Our Guarantee</div>
         <h2 class="reveal reveal-delay-1">Results within 30 days.<br><em>Or we work for free.</em></h2>

@@ -382,6 +382,29 @@ const liveLogoCss = `
 }
 `;
 
+const guaranteeBadgeCss = `
+
+/* Guarantee badge image */
+.guarantee-badge {
+  width: clamp(220px, 24vw, 320px);
+  height: auto;
+}
+.guarantee-badge img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  filter: drop-shadow(0 22px 46px rgba(0,0,0,0.35));
+}
+@media (max-width: 900px) {
+  .guarantee-badge {
+    justify-self: center;
+    margin: 0 auto;
+    width: min(76vw, 300px);
+  }
+}
+`;
+
 const navLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="58" height="58">';
 const footerLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="62" height="62">';
 const bookingUrl = "https://calendly.com/clinova/lost-revenue-audit";
@@ -400,8 +423,14 @@ const linkBookingCtas = (body) =>
     `<a$1 href="${bookingUrl}" target="_blank" rel="noopener noreferrer"$2>$3</a>`,
   );
 
+const replaceGuaranteeBadge = (body) =>
+  body.replace(
+    /<div class="guarantee-badge reveal">\s*<svg[\s\S]*?<\/svg>\s*<\/div>/,
+    '<div class="guarantee-badge reveal"><img src="/brand/30dayguarantee.png" alt="30-day results guarantee" width="320" height="320"></div>',
+  );
+
 const patchLanding = (body) =>
-  linkBookingCtas(
+  replaceGuaranteeBadge(linkBookingCtas(
     replaceLiveLogos(body)
     .replace('<a class="nav-logo" href="#">', '<a class="nav-logo" href="/">')
     .replace('<a class="nav-link" href="#pricing">Pricing</a>\n    <a class="nav-link" href="#faq">FAQ</a>', '<a class="nav-link" href="#pricing">Pricing</a>\n    <a class="nav-link" href="/about">About</a>\n    <a class="nav-link" href="#faq">FAQ</a>')
@@ -415,6 +444,7 @@ const patchLanding = (body) =>
     .replace('<div class="pricing-tier">Tier 02</div>\n        <div class="pricing-name">Growth</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">£400</div>\n          <div class="pricing-period">/ month</div>\n        </div>\n        <div class="pricing-setup">+ £1,000 one-time setup</div>', '<div class="pricing-tier">System 02</div>\n        <div class="pricing-name">Growth System</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">Bespoke</div>\n          <div class="pricing-period"> scope</div>\n        </div>\n        <div class="pricing-setup">Matched to your call volume and support needs</div>')
     .replace('<div class="pricing-tier">Tier 03</div>\n        <div class="pricing-name">Full System</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">£800</div>\n          <div class="pricing-period">/ month</div>\n        </div>\n        <div class="pricing-setup">+ £2,000 one-time setup</div>', '<div class="pricing-tier">System 03</div>\n        <div class="pricing-name">Full System</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">Tailored</div>\n          <div class="pricing-period"> build</div>\n        </div>\n        <div class="pricing-setup">Quoted once we understand your clinic</div>')
     .replace('<p class="pricing-guarantee reveal">All prices exclude VAT · No long-term contracts · Cancel anytime · 30-day results guarantee on every tier</p>', '<p class="pricing-guarantee reveal">No public one-size-fits-all pricing · 30-minute discovery call · 30-day results guarantee on every system</p>')
+    .replace('<em>18% revenue increase.</em><br>First month. Guaranteed.', '<em>18% revenue increase.</em><br>First month.')
     .replaceAll('<button class="pricing-cta">Get Started</button>', '<button class="pricing-cta" onclick="document.getElementById(\'final-cta\').scrollIntoView()">Get Started</button>')
     .replaceAll('<button class="pricing-cta featured-cta">Get Started</button>', '<button class="pricing-cta featured-cta" onclick="document.getElementById(\'final-cta\').scrollIntoView()">Get Started</button>')
     .replace('<button class="btn-primary" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</button>', '<button class="btn-primary" onclick="document.getElementById(\'final-cta\').scrollIntoView()" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</button>')
@@ -428,7 +458,7 @@ const patchLanding = (body) =>
     .replace('<a class="footer-link" href="#">Contact</a>', '<a class="footer-link" href="#final-cta">Contact</a>')
     .replaceAll('onclick="document.getElementById(\'final-cta\').scrollIntoView()"', 'data-scroll-target="final-cta"')
     .replaceAll('onclick="document.getElementById(\'how\').scrollIntoView()"', 'data-scroll-target="how"'),
-  );
+  ));
 
 const patchAbout = (body) =>
   linkBookingCtas(
@@ -451,14 +481,16 @@ const patchBrandKit = (body) =>
 
 mkdirSync(generatedRoot, { recursive: true });
 mkdirSync(join(projectRoot, "public", "uploads"), { recursive: true });
+mkdirSync(join(projectRoot, "public", "brand"), { recursive: true });
 copyFileSync(join(sourceRoot, "uploads", "ProfilePic.jpg"), join(projectRoot, "public", "uploads", "ProfilePic.jpg"));
+copyFileSync("/Users/jeremyscatigna/Downloads/30dayguarantee.png", join(projectRoot, "public", "brand", "30dayguarantee.png"));
 
 const landing = extract("Landing Page.html");
 const about = extract("About.html");
 const brandKit = extract("Brand Kit.html");
 
 const contents = `export const landingPage = {
-  css: \`${escapeTemplate(removeLongDashes(`${withFontVars(landing.css)}${landingResponsiveCss}${liveLogoCss}`))}\`,
+  css: \`${escapeTemplate(removeLongDashes(`${withFontVars(landing.css)}${landingResponsiveCss}${liveLogoCss}${guaranteeBadgeCss}`))}\`,
   body: \`${escapeTemplate(removeLongDashes(patchLanding(landing.body)))}\`,
 } as const;
 
