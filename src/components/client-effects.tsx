@@ -45,6 +45,20 @@ export function ClientEffects() {
       return () => question.removeEventListener("click", onClick);
     });
 
+    const onDocumentClick = (event: MouseEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const trigger = target.closest<HTMLElement>("[data-scroll-target]");
+      if (!trigger) return;
+
+      const scrollTarget = document.getElementById(trigger.dataset.scrollTarget ?? "");
+      if (!scrollTarget) return;
+
+      event.preventDefault();
+      scrollTarget.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
     const nav = document.getElementById("nav");
     const onScroll = () => {
       if (nav) {
@@ -60,12 +74,14 @@ export function ClientEffects() {
       });
     };
 
+    document.addEventListener("click", onDocumentClick);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
     return () => {
       revealObserver?.disconnect();
       faqCleanups.forEach((cleanup) => cleanup());
+      document.removeEventListener("click", onDocumentClick);
       window.removeEventListener("scroll", onScroll);
     };
   }, [pathname]);

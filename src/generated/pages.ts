@@ -711,7 +711,7 @@ section { width: 100%; }
     <a class="nav-link" href="#pricing">Pricing</a>
     <a class="nav-link" href="/about">About</a>
     <a class="nav-link" href="#faq">FAQ</a>
-    <button class="nav-cta" onclick="document.getElementById('final-cta').scrollIntoView()">Book a Call ↗</button>
+    <button class="nav-cta" data-scroll-target="final-cta">Book a Call ↗</button>
   </div>
 </nav>
 
@@ -722,14 +722,14 @@ section { width: 100%; }
   <div class="hero-inner">
     <div class="eyebrow reveal">AI Receptionist for Aesthetic Clinics</div>
     <h1 class="hero-title reveal reveal-delay-1">
-      Your clinic is losing<br><em>£21,000 every month.</em><br>We stop that.
+      Your clinic is losing<br><em>£10,000 to £30,000 every month.</em><br>We stop that.
     </h1>
     <p class="hero-sub reveal reveal-delay-2">
       ClinovaAI installs a done-for-you AI receptionist into your clinic — answering every missed call, booking every appointment, 24 hours a day, 7 days a week. You do nothing differently. Except watch your calendar fill.
     </p>
     <div class="btn-row reveal reveal-delay-3">
-      <button class="btn-primary" onclick="document.getElementById('final-cta').scrollIntoView()">Book a Discovery Call ↗</button>
-      <button class="btn-outline" onclick="document.getElementById('how').scrollIntoView()">See How It Works</button>
+      <button class="btn-primary" data-scroll-target="final-cta">Book a Discovery Call ↗</button>
+      <button class="btn-outline" data-scroll-target="how">See How It Works</button>
     </div>
     <div class="hero-proof reveal reveal-delay-4">
       <div class="hero-proof-item">
@@ -779,8 +779,8 @@ section { width: 100%; }
     <div class="problem-grid">
       <div class="problem-stats">
         <div class="problem-stat-card reveal">
-          <div class="problem-stat-number danger">£21,000</div>
-          <div class="problem-stat-label">Average monthly revenue lost by aesthetic clinics from missed calls alone</div>
+          <div class="problem-stat-number danger">£10k–£30k</div>
+          <div class="problem-stat-label">Typical monthly revenue at risk when high-intent enquiries go unanswered</div>
         </div>
         <div class="problem-stat-card reveal reveal-delay-1">
           <div class="problem-stat-number danger">8+</div>
@@ -793,9 +793,9 @@ section { width: 100%; }
       </div>
       <div class="problem-copy">
         <div class="eyebrow reveal">The Problem</div>
-        <h2 class="reveal reveal-delay-1">The clients you're losing aren't going elsewhere.<br><em>They're going unanswered.</em></h2>
+        <h2 class="reveal reveal-delay-1">These clients need treatment now.<br><em>If you don't answer, your competitor will.</em></h2>
         <p class="reveal reveal-delay-2">You're mid-treatment. Your team is with a client. The phone rings, no one answers, and that caller — who was ready to book a £350 treatment — simply moves on. They don't leave a voicemail. They don't wait. They book the clinic down the road.</p>
-        <p class="reveal reveal-delay-3">This happens <strong>eight times a day</strong> at the average aesthetic clinic. At £350 per treatment, that's <strong>over £21,000 every single month</strong> walking out the door. Not because your treatments aren't excellent. Not because your prices are wrong. Simply because no one was there to answer.</p>
+        <p class="reveal reveal-delay-3">This happens <strong>eight times a day</strong> at the average aesthetic clinic. At £350 per treatment, that can mean <strong>£10,000 to £30,000 every single month</strong> walking out the door. Not because your treatments aren't excellent. Not because your prices are wrong. Simply because no one was there to answer first.</p>
         <p class="reveal reveal-delay-4">Studies confirm that clinics responding within five minutes convert <strong>eight times more bookings</strong> than those responding within an hour. Your reputation is built in the treatment room. Your revenue is decided before clients ever walk through the door.</p>
       </div>
     </div>
@@ -904,20 +904,20 @@ section { width: 100%; }
   <div class="container">
     <div class="pricing-header">
       <div class="eyebrow reveal" style="justify-content:center;">Pricing</div>
-      <h2 class="reveal reveal-delay-1">Transparent pricing.<br><em>Measurable returns.</em></h2>
-      <p class="reveal reveal-delay-2">Every tier includes our 30-day results guarantee. If you don't see measurable improvement in captured bookings within 30 days, we keep working for free until you do.</p>
+      <h2 class="reveal reveal-delay-1">Built around your clinic.<br><em>Scoped on a call.</em></h2>
+      <p class="reveal reveal-delay-2">Pricing depends on your clinic, call volume, and the level of support you need. On a 30-minute call, we look at how your enquiries are currently handled, identify where you are losing patients, and map out what this would look like for your business.</p>
     </div>
     <div class="pricing-grid">
 
       <!-- Starter -->
       <div class="pricing-card reveal">
-        <div class="pricing-tier">Tier 01</div>
-        <div class="pricing-name">Starter</div>
+        <div class="pricing-tier">System 01</div>
+        <div class="pricing-name">Core Reception</div>
         <div class="pricing-price">
-          <div class="pricing-amount">£200</div>
-          <div class="pricing-period">/ month</div>
+          <div class="pricing-amount">Custom</div>
+          <div class="pricing-period"> plan</div>
         </div>
-        <div class="pricing-setup">+ £500 one-time setup</div>
+        <div class="pricing-setup">Scoped after your discovery call</div>
         <hr class="pricing-divider">
         <ul class="pricing-features">
           <li>Core AI receptionist</li>
@@ -927,19 +927,19 @@ section { width: 100%; }
           <li>Monthly performance report</li>
           <li>30-day results guarantee</li>
         </ul>
-        <button class="pricing-cta">Get Started</button>
+        <button class="pricing-cta" data-scroll-target="final-cta">Get Started</button>
       </div>
 
       <!-- Growth (featured) -->
       <div class="pricing-card featured reveal reveal-delay-1">
         <div class="pricing-badge">Most Popular</div>
-        <div class="pricing-tier">Tier 02</div>
-        <div class="pricing-name">Growth</div>
+        <div class="pricing-tier">System 02</div>
+        <div class="pricing-name">Growth System</div>
         <div class="pricing-price">
-          <div class="pricing-amount">£400</div>
-          <div class="pricing-period">/ month</div>
+          <div class="pricing-amount">Bespoke</div>
+          <div class="pricing-period"> scope</div>
         </div>
-        <div class="pricing-setup">+ £1,000 one-time setup</div>
+        <div class="pricing-setup">Matched to your call volume and support needs</div>
         <hr class="pricing-divider">
         <ul class="pricing-features">
           <li>Full AI call handling — every call answered</li>
@@ -950,18 +950,18 @@ section { width: 100%; }
           <li>Everything in Starter</li>
           <li>30-day results guarantee</li>
         </ul>
-        <button class="pricing-cta featured-cta">Get Started</button>
+        <button class="pricing-cta featured-cta" data-scroll-target="final-cta">Get Started</button>
       </div>
 
       <!-- Full System -->
       <div class="pricing-card reveal reveal-delay-2">
-        <div class="pricing-tier">Tier 03</div>
+        <div class="pricing-tier">System 03</div>
         <div class="pricing-name">Full System</div>
         <div class="pricing-price">
-          <div class="pricing-amount">£800</div>
-          <div class="pricing-period">/ month</div>
+          <div class="pricing-amount">Tailored</div>
+          <div class="pricing-period"> build</div>
         </div>
-        <div class="pricing-setup">+ £2,000 one-time setup</div>
+        <div class="pricing-setup">Quoted once we understand your clinic</div>
         <hr class="pricing-divider">
         <ul class="pricing-features">
           <li>Modern website, designed for your clinic</li>
@@ -972,11 +972,11 @@ section { width: 100%; }
           <li>Everything in Growth</li>
           <li>30-day results guarantee</li>
         </ul>
-        <button class="pricing-cta">Get Started</button>
+        <button class="pricing-cta" data-scroll-target="final-cta">Get Started</button>
       </div>
 
     </div>
-    <p class="pricing-guarantee reveal">All prices exclude VAT · No long-term contracts · Cancel anytime · 30-day results guarantee on every tier</p>
+    <p class="pricing-guarantee reveal">No public one-size-fits-all pricing · 30-minute discovery call · 30-day results guarantee on every system</p>
   </div>
 </section>
 
@@ -1108,7 +1108,7 @@ section { width: 100%; }
     <h2 class="reveal reveal-delay-1">Your clinic never<br><em>has to close again.</em></h2>
     <p class="reveal reveal-delay-2">Book a 30-minute discovery call. We'll review your current missed call volume, show you exactly what we'd build for your clinic, and give you a clear picture of what you can expect within 30 days.</p>
     <div class="btn-row reveal reveal-delay-3">
-      <button class="btn-primary" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</button>
+      <button class="btn-primary" data-scroll-target="final-cta" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</button>
     </div>
     <p class="final-cta-note reveal reveal-delay-4">No commitment required · 30-minute call · Results within 30 days guaranteed</p>
   </div>
@@ -1131,10 +1131,10 @@ section { width: 100%; }
       <div>
         <div class="footer-col-title">Services</div>
         <div class="footer-links">
-          <a class="footer-link" href="#">AI Receptionist</a>
-          <a class="footer-link" href="#">Google Review Automation</a>
-          <a class="footer-link" href="#">Client Re-engagement</a>
-          <a class="footer-link" href="#">Website &amp; Chatbot</a>
+          <a class="footer-link" href="#services">AI Receptionist</a>
+          <a class="footer-link" href="#services">Google Review Automation</a>
+          <a class="footer-link" href="#services">Client Re-engagement</a>
+          <a class="footer-link" href="#services">Website &amp; Chatbot</a>
         </div>
       </div>
       <div>
@@ -1143,7 +1143,7 @@ section { width: 100%; }
           <a class="footer-link" href="/about">About</a>
           <a class="footer-link" href="#results">Results</a>
           <a class="footer-link" href="#pricing">Pricing</a>
-          <a class="footer-link" href="#">Contact</a>
+          <a class="footer-link" href="#final-cta">Contact</a>
         </div>
       </div>
       <div>
@@ -1614,7 +1614,7 @@ a { color: inherit; text-decoration: none; }
     <a class="nav-link" href="/#pricing">Pricing</a>
     <a class="nav-link active" href="/about">About</a>
     <a class="nav-link" href="/#faq">FAQ</a>
-    <button class="nav-cta" onclick="document.getElementById('about-cta').scrollIntoView()">Book a Call ↗</button>
+    <button class="nav-cta" data-scroll-target="about-cta">Book a Call ↗</button>
   </div>
 </nav>
 
@@ -1627,7 +1627,7 @@ a { color: inherit; text-decoration: none; }
       <h1 class="reveal reveal-delay-1">Built by an AI engineer.<br><em>Not a marketer.</em></h1>
       <p class="about-hero-sub reveal reveal-delay-2">Most AI tools for clinics are built by people who discovered AI last year. ClinovaAI was built by someone who's been building AI systems since 2015 — a decade before it became a trend — and has deployed them at some of the world's most demanding technology companies.</p>
       <div class="btn-row reveal reveal-delay-3">
-        <button class="btn-primary" onclick="document.getElementById('about-cta').scrollIntoView()">Book a Discovery Call ↗</button>
+        <button class="btn-primary" data-scroll-target="about-cta">Book a Discovery Call ↗</button>
         <a class="btn-outline" href="/">See Our Services</a>
       </div>
     </div>
@@ -1818,7 +1818,7 @@ a { color: inherit; text-decoration: none; }
     <h2 class="reveal reveal-delay-1">Ready to stop<br><em>losing bookings?</em></h2>
     <p class="reveal reveal-delay-2">Book a 30-minute discovery call. We'll review your current missed call volume, show you exactly what we'd build for your clinic, and give you a clear picture of what to expect within 30 days.</p>
     <div class="btn-row reveal reveal-delay-3">
-      <button class="btn-primary" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</button>
+      <button class="btn-primary" data-scroll-target="about-cta" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</button>
       <a class="btn-outline" href="/">View Our Services</a>
     </div>
     <p class="reveal reveal-delay-4" style="margin-top:28px; font-size:12px; color:var(--cream-dim); opacity:0.4; letter-spacing:0.04em;">No commitment required · 30 minutes · 30-day results guaranteed</p>
@@ -3356,7 +3356,7 @@ export const brandKitPage = {
     <div style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--teal); margin-bottom:20px;">Three Headlines That Capture the Voice Perfectly</div>
     <div class="headline-card">
       <div class="headline-number">01</div>
-      <div class="headline-text">The <em>clients you're losing</em> aren't going elsewhere. They're just going unanswered.</div>
+      <div class="headline-text">The <em>clients you're losing</em> need treatment now. If you don't answer, your competitor will.</div>
       <div class="headline-note">Uses a counter-intuitive reframe. Speaks to the problem without blame. Opens a gap that ClinovaAI fills.</div>
     </div>
     <div class="headline-card">
