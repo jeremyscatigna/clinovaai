@@ -405,6 +405,58 @@ const guaranteeBadgeCss = `
 }
 `;
 
+const pricingTierCss = `
+
+/* Pricing tier details */
+.pricing-feature-note {
+  display: block;
+  margin-top: 5px;
+  color: var(--cream-dim);
+  opacity: 0.62;
+  font-size: 12px;
+  line-height: 1.55;
+}
+.pricing-card-note {
+  margin: -14px 0 28px;
+  color: var(--cream);
+  font-size: 13px;
+  line-height: 1.65;
+  opacity: 0.76;
+}
+.pricing-tailored {
+  max-width: 860px;
+  margin: 52px auto 0;
+  padding: 34px 38px;
+  text-align: left;
+  background: rgba(22,32,25,0.72);
+  border: 1px solid var(--rule);
+  font-size: 14px;
+  line-height: 1.75;
+}
+.pricing-tailored strong {
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: -0.015em;
+}
+.pricing-tailored span {
+  display: block;
+  margin-top: 12px;
+}
+@media (max-width: 560px) {
+  .pricing-tailored {
+    padding: 28px 22px;
+    margin-top: 36px;
+  }
+  .pricing-tailored strong {
+    font-size: 21px;
+  }
+}
+`;
+
 const navLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="58" height="58">';
 const footerLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="62" height="62">';
 const bookingUrl = "https://calendly.com/clinova/lost-revenue-audit";
@@ -429,8 +481,96 @@ const replaceGuaranteeBadge = (body) =>
     '<div class="guarantee-badge reveal"><img src="/brand/30dayguarantee.png" alt="30-day results guarantee" width="320" height="320"></div>',
   );
 
+const pricingSection = `<!-- ══ PRICING ══ -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="pricing-header">
+      <div class="eyebrow reveal" style="justify-content:center;">Pricing</div>
+      <h2 class="reveal reveal-delay-1">Everything in one place.<br><em>Clear systems. Clear ROI.</em></h2>
+      <p class="reveal reveal-delay-2">Choose the level of support your clinic needs today. Each tier is built to recover missed revenue, increase booked appointments, and reduce manual follow-up.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="pricing-card reveal">
+        <div class="pricing-tier">Tier 1 - Entry / ROI Focused</div>
+        <div class="pricing-name">Growth System</div>
+        <div class="pricing-price">
+          <div class="pricing-amount">Discussed</div>
+          <div class="pricing-period"> on call</div>
+        </div>
+        <div class="pricing-setup">Entry-level implementation scoped after your audit</div>
+        <hr class="pricing-divider">
+        <ul class="pricing-features">
+          <li>Missed call text-back automation</li>
+          <li>Automatically sends testimonials to build trust</li>
+          <li>Basic AI response system</li>
+          <li>Simple consistent SMS follow-up to reduce no-shows and handle reschedules</li>
+          <li>Basic reporting</li>
+        </ul>
+        <p class="pricing-card-note">This stops you losing easy revenue from missed calls.</p>
+        <a class="pricing-cta" href="${bookingUrl}" target="_blank" rel="noopener noreferrer">Get Started</a>
+      </div>
+
+      <div class="pricing-card featured reveal reveal-delay-1">
+        <div class="pricing-badge">Core Revenue Driver</div>
+        <div class="pricing-tier">Tier 2 - Core Revenue Driver</div>
+        <div class="pricing-name">Revenue Accelerator</div>
+        <div class="pricing-price">
+          <div class="pricing-amount">Scoped</div>
+          <div class="pricing-period"> to fit</div>
+        </div>
+        <div class="pricing-setup">Quoted based on call volume, calendar setup, and integrations</div>
+        <hr class="pricing-divider">
+        <ul class="pricing-features">
+          <li>Everything in Growth System</li>
+          <li>AI call handling and appointment booking<span class="pricing-feature-note">Automatically answers inbound calls, qualifies enquiries, and books directly into your calendar.</span></li>
+          <li>Multi-step follow-up system<span class="pricing-feature-note">SMS and email sequences that convert missed and inbound leads into booked appointments.</span></li>
+          <li>Lead capture and qualification<span class="pricing-feature-note">Ensures every enquiry is captured, filtered, and directed correctly.</span></li>
+          <li>CRM integration<span class="pricing-feature-note">Connects with your systems via GoHighLevel or similar.</span></li>
+          <li>Booking optimisation<span class="pricing-feature-note">Reduces drop-offs and increases the percentage of enquiries that turn into appointments.</span></li>
+        </ul>
+        <p class="pricing-card-note">This is where your system shifts from recovering missed opportunities to consistently generating new bookings on autopilot.</p>
+        <a class="pricing-cta featured-cta" href="${bookingUrl}" target="_blank" rel="noopener noreferrer">Get Started</a>
+      </div>
+
+      <div class="pricing-card reveal reveal-delay-2">
+        <div class="pricing-tier">Tier 3 - Premium / Authority Play</div>
+        <div class="pricing-name">Clinic Dominance System</div>
+        <div class="pricing-price">
+          <div class="pricing-amount">Custom</div>
+          <div class="pricing-period"> quote</div>
+        </div>
+        <div class="pricing-setup">Built around your clinic, locations, workflows, and support needs</div>
+        <hr class="pricing-divider">
+        <ul class="pricing-features">
+          <li>Everything in Growth System and Revenue Accelerator</li>
+          <li>Advanced AI automations tailored to your clinic<span class="pricing-feature-note">Custom workflows for enquiries, follow-ups, and reactivation campaigns.</span></li>
+          <li>Automated review and reputation system<span class="pricing-feature-note">Consistently generates 5★ reviews, strengthens local trust, and helps you rank higher on Google.</span></li>
+          <li>Website conversion system<span class="pricing-feature-note">Turns your website into a 24/7 booking machine with AI chat and a seamless booking flow.</span></li>
+          <li>AI receptionist and appointment setting system<span class="pricing-feature-note">Captures, qualifies, and books inbound enquiries automatically.</span></li>
+          <li>Multi-location support<span class="pricing-feature-note">Centralised management of enquiries, bookings, and follow-ups across clinics in different locations.</span></li>
+          <li>Custom integrations<span class="pricing-feature-note">Connects with your existing tools, calendars, and systems.</span></li>
+          <li>Priority support and ongoing optimisation<span class="pricing-feature-note">Faster response times and continuous improvements to increase performance.</span></li>
+        </ul>
+        <p class="pricing-card-note">This is how you dominate your local market and automate your entire front-end, so no lead is missed and bookings run consistently without extra manual effort.</p>
+        <a class="pricing-cta" href="${bookingUrl}" target="_blank" rel="noopener noreferrer">Get Started</a>
+      </div>
+
+    </div>
+    <div class="pricing-guarantee reveal pricing-tailored">
+      <strong>Tailored Implementation</strong>
+      While we work within clear system tiers, we understand that every clinic operates differently in practice.
+      <span>Because of that, we can make controlled adjustments to your setup to match your clinic's specific workflow, patient volume, and existing systems, without changing the core structure of the system itself.</span>
+      <span>This ensures you get a solution that is both structured and practical in real-world conditions, rather than a rigid one-size-fits-all setup.</span>
+    </div>
+  </div>
+</section>`;
+
+const replacePricingSection = (body) =>
+  body.replace(/<!-- ══ PRICING ══ -->[\s\S]*?(?=<!-- ══ CASE STUDY ══ -->)/, `${pricingSection}\n\n`);
+
 const patchLanding = (body) =>
-  replaceGuaranteeBadge(linkBookingCtas(
+  replacePricingSection(replaceGuaranteeBadge(linkBookingCtas(
     replaceLiveLogos(body)
     .replace('<a class="nav-logo" href="#">', '<a class="nav-logo" href="/">')
     .replace('<a class="nav-link" href="#pricing">Pricing</a>\n    <a class="nav-link" href="#faq">FAQ</a>', '<a class="nav-link" href="#pricing">Pricing</a>\n    <a class="nav-link" href="/about">About</a>\n    <a class="nav-link" href="#faq">FAQ</a>')
@@ -458,7 +598,7 @@ const patchLanding = (body) =>
     .replace('<a class="footer-link" href="#">Contact</a>', '<a class="footer-link" href="#final-cta">Contact</a>')
     .replaceAll('onclick="document.getElementById(\'final-cta\').scrollIntoView()"', 'data-scroll-target="final-cta"')
     .replaceAll('onclick="document.getElementById(\'how\').scrollIntoView()"', 'data-scroll-target="how"'),
-  ));
+  )));
 
 const patchAbout = (body) =>
   linkBookingCtas(
@@ -490,7 +630,7 @@ const about = extract("About.html");
 const brandKit = extract("Brand Kit.html");
 
 const contents = `export const landingPage = {
-  css: \`${escapeTemplate(removeLongDashes(`${withFontVars(landing.css)}${landingResponsiveCss}${liveLogoCss}${guaranteeBadgeCss}`))}\`,
+  css: \`${escapeTemplate(removeLongDashes(`${withFontVars(landing.css)}${landingResponsiveCss}${liveLogoCss}${guaranteeBadgeCss}${pricingTierCss}`))}\`,
   body: \`${escapeTemplate(removeLongDashes(patchLanding(landing.body)))}\`,
 } as const;
 
