@@ -691,6 +691,196 @@ section { width: 100%; }
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--dark-2); }
 ::-webkit-scrollbar-thumb { background: var(--teal-dim); border-radius: 2px; }
+
+
+/* Responsive refinement layer */
+@media (max-width: 1100px) {
+  .nav { padding: 0 32px; }
+  .nav-links { gap: 22px; }
+  .container,
+  .container-wide { padding: 0 32px; }
+  .problem-grid,
+  .case-grid,
+  .guarantee-inner { gap: 52px; }
+  .pricing-card,
+  .service-card,
+  .step-card { padding-left: 32px; padding-right: 32px; }
+}
+
+@media (max-width: 900px) {
+  body { font-size: 15px; }
+  .nav {
+    height: 66px;
+    padding: 0 24px;
+    background: rgba(8,12,11,0.96);
+  }
+  .nav-logo svg { width: 128px; height: auto; }
+  .nav-links { gap: 0; }
+  .nav-link { display: none; }
+  .nav-link[href="/about"] {
+    display: inline-flex;
+    margin-right: 14px;
+  }
+  .nav-cta {
+    padding: 10px 16px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .container,
+  .container-wide { padding: 0 24px; }
+  .hero {
+    min-height: auto;
+    padding: 116px 24px 76px;
+  }
+  .hero-glow-1 {
+    top: -180px;
+    right: -260px;
+    width: 520px;
+    height: 520px;
+  }
+  .hero-glow-2 {
+    bottom: -220px;
+    left: -240px;
+    width: 420px;
+    height: 420px;
+  }
+  .hero-title {
+    font-size: clamp(40px, 11vw, 58px);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    margin-bottom: 24px;
+  }
+  .hero-sub {
+    font-size: 16px;
+    line-height: 1.72;
+    margin-bottom: 34px;
+    max-width: 100%;
+  }
+  .hero-proof {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
+    margin-top: 46px;
+    padding-top: 34px;
+  }
+  .hero-proof-num { font-size: 31px; }
+  .hero-proof-label { font-size: 11px; line-height: 1.45; }
+  .ticker-strip { padding: 12px 0; }
+  .ticker-item { padding: 0 24px; font-size: 10px; }
+  .problem,
+  .solution,
+  .how,
+  .pricing,
+  .case-study,
+  .guarantee,
+  .faq,
+  .final-cta { padding: 86px 0; }
+  .problem-grid,
+  .case-grid,
+  .guarantee-inner {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+  .problem-copy { order: -1; }
+  .problem-copy h2,
+  .solution-header h2,
+  .how-header h2,
+  .pricing-header h2,
+  .guarantee-copy h2,
+  .faq-header h2,
+  .final-cta h2 {
+    font-size: clamp(34px, 9vw, 46px);
+    line-height: 1.05;
+  }
+  .problem-stat-card { padding: 26px 24px; }
+  .problem-stat-number { font-size: 40px; }
+  .solution-header,
+  .how-header,
+  .pricing-header,
+  .faq-header { margin-bottom: 48px; }
+  .services-grid,
+  .steps-grid,
+  .pricing-grid,
+  .trust-grid,
+  .footer-grid { grid-template-columns: 1fr; }
+  .service-card,
+  .step-card,
+  .pricing-card,
+  .trust-card { padding: 34px 26px; }
+  .pricing-card.featured { transform: none; }
+  .pricing-amount { font-size: 43px; }
+  .case-study-inner { padding: 42px 28px; }
+  .case-stats { grid-template-columns: 1fr; }
+  .guarantee-badge { justify-self: start; }
+  .guarantee-badge svg { width: 132px; height: 132px; }
+  .faq-q { padding: 24px 22px; font-size: 16px; gap: 18px; }
+  .faq-a-inner { padding: 0 22px 24px; }
+  .final-cta::before {
+    width: 520px;
+    height: 520px;
+  }
+  .footer { padding: 56px 0 34px; }
+  .footer-grid { gap: 34px; margin-bottom: 46px; }
+  .footer-bottom { align-items: flex-start; }
+}
+
+@media (max-width: 560px) {
+  .nav { padding: 0 18px; }
+  .nav-logo svg { width: 116px; }
+  .nav-cta { padding: 9px 12px; font-size: 9px; }
+  .container,
+  .container-wide { padding: 0 20px; }
+  .hero { padding: 104px 20px 64px; }
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .eyebrow::before { width: 22px; }
+  .hero-title { font-size: clamp(38px, 11.5vw, 48px); }
+  .btn-row { width: 100%; gap: 12px; }
+  .btn-primary,
+  .btn-outline,
+  .pricing-cta {
+    width: 100%;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero-proof {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 14px;
+  }
+  .hero-proof-num { font-size: 28px; }
+  .problem,
+  .solution,
+  .how,
+  .pricing,
+  .case-study,
+  .guarantee,
+  .faq,
+  .final-cta { padding: 72px 0; }
+  .problem-copy h2,
+  .solution-header h2,
+  .how-header h2,
+  .pricing-header h2,
+  .guarantee-copy h2,
+  .faq-header h2,
+  .final-cta h2 { font-size: clamp(32px, 10vw, 40px); }
+  .service-card,
+  .step-card,
+  .pricing-card,
+  .trust-card,
+  .problem-stat-card { padding: 28px 22px; }
+  .step-num { font-size: 64px; top: 18px; right: 20px; }
+  .pricing-amount { font-size: 36px; }
+  .case-study-inner { padding: 34px 22px; }
+  .case-stat-num { font-size: 42px; }
+  .guarantee-inner { text-align: left; }
+  .final-cta p { margin-bottom: 34px; }
+}
 `,
   body: `<!-- ══ NAV ══ -->
 <nav class="nav" id="nav">
@@ -1597,6 +1787,153 @@ a { color: inherit; text-decoration: none; }
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--dark-2); }
 ::-webkit-scrollbar-thumb { background: var(--teal-dim); border-radius: 2px; }
+
+
+/* Responsive refinement layer */
+@media (max-width: 1100px) {
+  .nav { padding: 0 32px; }
+  .nav-links { gap: 22px; }
+  .container { padding: 0 32px; }
+  .about-hero-grid,
+  .story-grid,
+  .expertise-inner { gap: 56px; }
+}
+
+@media (max-width: 900px) {
+  body { font-size: 15px; }
+  .nav {
+    height: 66px;
+    padding: 0 24px;
+    background: rgba(8,12,11,0.96);
+  }
+  .nav a svg { width: 128px; height: auto; }
+  .nav-links { gap: 0; }
+  .nav-link { display: none; }
+  .nav-link.active {
+    display: inline-flex;
+    margin-right: 14px;
+  }
+  .nav-cta {
+    padding: 10px 16px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .container { padding: 0 24px; }
+  .about-hero {
+    padding: 116px 24px 76px;
+  }
+  .hero-glow {
+    top: -190px;
+    right: -260px;
+    width: 520px;
+    height: 520px;
+  }
+  .about-hero-grid,
+  .story-grid,
+  .expertise-inner {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+  .about-hero h1,
+  .story-copy h2,
+  .different-header h2,
+  .expertise-copy h2,
+  .about-cta h2 {
+    font-size: clamp(36px, 9vw, 50px);
+    line-height: 1.04;
+  }
+  .about-hero-sub {
+    font-size: 16px;
+    max-width: 100%;
+    margin-bottom: 34px;
+  }
+  .founder-photo-wrap {
+    max-width: 480px;
+    width: 100%;
+  }
+  .cred-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cred-item {
+    padding: 30px 24px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .story,
+  .different,
+  .expertise,
+  .promise,
+  .about-cta { padding: 86px 0; }
+  .different-header { margin-bottom: 48px; }
+  .diff-grid,
+  .expertise-logos {
+    grid-template-columns: 1fr;
+  }
+  .diff-card,
+  .expertise-logo-card { padding: 34px 26px; }
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 26px 0;
+  }
+  .promise-inner { padding: 0 24px; }
+  .promise-quote { font-size: clamp(26px, 7vw, 36px); }
+  .about-cta::before {
+    width: 520px;
+    height: 520px;
+  }
+  .footer { padding: 42px 24px; }
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav { padding: 0 18px; }
+  .nav a svg { width: 116px; }
+  .nav-cta { padding: 9px 12px; font-size: 9px; }
+  .container { padding: 0 20px; }
+  .about-hero { padding: 104px 20px 64px; }
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .eyebrow::before { width: 22px; }
+  .about-hero h1,
+  .story-copy h2,
+  .different-header h2,
+  .expertise-copy h2,
+  .about-cta h2 { font-size: clamp(32px, 10vw, 42px); }
+  .btn-row { width: 100%; gap: 12px; }
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .founder-credentials { padding: 22px 20px; }
+  .founder-name { font-size: 19px; }
+  .founder-title { font-size: 9px; line-height: 1.5; }
+  .cred-grid { grid-template-columns: 1fr; }
+  .cred-item {
+    border-right: none;
+    padding: 28px 22px;
+  }
+  .story,
+  .different,
+  .expertise,
+  .promise,
+  .about-cta { padding: 72px 0; }
+  .diff-card,
+  .expertise-logo-card { padding: 28px 22px; }
+  .promise-inner { padding: 0 20px; }
+  .about-cta p { margin-bottom: 34px; }
+}
 `,
   body: `<!-- ══ NAV ══ -->
 <nav class="nav">
