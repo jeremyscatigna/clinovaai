@@ -382,8 +382,8 @@ const liveLogoCss = `
 }
 `;
 
-const navLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="58" height="42">';
-const footerLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="62" height="47">';
+const navLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="58" height="58">';
+const footerLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="62" height="62">';
 const bookingUrl = "https://calendly.com/clinova/lost-revenue-audit";
 
 const removeLongDashes = (value) => value.replace(/[\u2013\u2014]/g, "-");

@@ -23,9 +23,9 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: "any",
       },
       {
-        src: "/brand/clinova-logo-mark.svg",
-        sizes: "any",
-        type: "image/svg+xml",
+        src: "/brand/clinova-logo-mark.png",
+        sizes: "512x512",
+        type: "image/png",
         purpose: "any",
       },
     ],

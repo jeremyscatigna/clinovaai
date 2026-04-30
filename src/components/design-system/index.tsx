@@ -23,10 +23,10 @@ export function BrandLogo({ compact = false }: { compact?: boolean }) {
 
   return (
     <Image
-      src="/brand/clinova-logo-mark.svg"
+      src="/brand/clinova-logo-mark.png"
       alt="ClinovaAI"
       width={width}
-      height={compact ? 33 : 42}
+      height={width}
       style={{ display: "block", height: "auto" }}
     />
   );

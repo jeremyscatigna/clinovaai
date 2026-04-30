@@ -901,7 +901,7 @@ section { width: 100%; }
   body: `<!-- ══ NAV ══ -->
 <nav class="nav" id="nav">
   <a class="nav-logo" href="/">
-    <img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="58" height="42">
+    <img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="58" height="58">
   </a>
   <div class="nav-links">
     <a class="nav-link" href="#how">How It Works</a>
@@ -1317,7 +1317,7 @@ section { width: 100%; }
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="62" height="47">
+        <img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="62" height="62">
         <p>The AI receptionist built for aesthetic clinics, med spas, and cosmetic practices across the UK. Never miss a booking again.</p>
       </div>
       <div>
@@ -1956,7 +1956,7 @@ a { color: inherit; text-decoration: none; }
   body: `<!-- ══ NAV ══ -->
 <nav class="nav">
   <a href="/">
-    <img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="58" height="42">
+    <img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="58" height="58">
   </a>
   <div class="nav-links">
     <a class="nav-link" href="/#services">Services</a>
@@ -2177,7 +2177,7 @@ a { color: inherit; text-decoration: none; }
 <!-- ══ FOOTER ══ -->
 <footer class="footer">
   <div class="footer-inner">
-    <img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="62" height="47">
+    <img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="62" height="62">
     <div class="footer-copy">© 2026 ClinovaAI Ltd · clinovaai.co</div>
     <div class="footer-tagline">"Never Miss a Booking Again"</div>
   </div>
