@@ -439,7 +439,7 @@ section { width: 100%; }
   line-height: 1.5;
 }
 .pricing-features li::before {
-  content: '—';
+  content: '-';
   color: var(--teal); flex-shrink: 0; margin-top: 1px;
 }
 .pricing-cta {
@@ -881,19 +881,27 @@ section { width: 100%; }
   .guarantee-inner { text-align: left; }
   .final-cta p { margin-bottom: 34px; }
 }
+
+
+/* Live brand logo */
+.brand-logo-mark {
+  display: block;
+  width: 58px;
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(184,147,90,0.12));
+}
+.footer .brand-logo-mark {
+  width: 62px;
+}
+@media (max-width: 900px) {
+  .brand-logo-mark { width: 46px; }
+  .footer .brand-logo-mark { width: 54px; }
+}
 `,
   body: `<!-- ══ NAV ══ -->
 <nav class="nav" id="nav">
   <a class="nav-logo" href="/">
-    <svg viewBox="0 0 148 32" fill="none" width="148" height="32">
-      <!-- Axis icon -->
-      <path d="M20 8 Q6 8 4 16 Q6 24 20 24" stroke="#0C9E8F" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-      <line x1="4" y1="16" x2="22" y2="16" stroke="#0C9E8F" stroke-width="0.8" opacity="0.3"/>
-      <circle cx="22" cy="16" r="2.2" fill="#B8935A"/>
-      <!-- Wordmark -->
-      <text x="32" y="22" font-family="Georgia, serif" font-size="17" font-weight="400" fill="#F6F3F0" letter-spacing="-0.4">Clinova</text>
-      <text x="105" y="22" font-family="Georgia, serif" font-size="17" font-weight="400" fill="#0C9E8F" letter-spacing="-0.4">AI</text>
-    </svg>
+    <img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="58" height="42">
   </a>
   <div class="nav-links">
     <a class="nav-link" href="#how">How It Works</a>
@@ -901,7 +909,7 @@ section { width: 100%; }
     <a class="nav-link" href="#pricing">Pricing</a>
     <a class="nav-link" href="/about">About</a>
     <a class="nav-link" href="#faq">FAQ</a>
-    <button class="nav-cta" data-scroll-target="final-cta">Book a Call ↗</button>
+    <a class="nav-cta" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Call ↗</a>
   </div>
 </nav>
 
@@ -915,10 +923,10 @@ section { width: 100%; }
       Your clinic is losing<br><em>£10,000 to £30,000 every month.</em><br>We stop that.
     </h1>
     <p class="hero-sub reveal reveal-delay-2">
-      ClinovaAI installs a done-for-you AI receptionist into your clinic — answering every missed call, booking every appointment, 24 hours a day, 7 days a week. You do nothing differently. Except watch your calendar fill.
+      ClinovaAI installs a done-for-you AI receptionist into your clinic - answering every missed call, booking every appointment, 24 hours a day, 7 days a week. You do nothing differently. Except watch your calendar fill.
     </p>
     <div class="btn-row reveal reveal-delay-3">
-      <button class="btn-primary" data-scroll-target="final-cta">Book a Discovery Call ↗</button>
+      <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Discovery Call ↗</a>
       <button class="btn-outline" data-scroll-target="how">See How It Works</button>
     </div>
     <div class="hero-proof reveal reveal-delay-4">
@@ -936,7 +944,7 @@ section { width: 100%; }
       </div>
       <div class="hero-proof-item">
         <div class="hero-proof-num">30<span>days</span></div>
-        <div class="hero-proof-label">results guarantee —<br>or we work for free</div>
+        <div class="hero-proof-label">results guarantee -<br>or we work for free</div>
       </div>
     </div>
   </div>
@@ -969,7 +977,7 @@ section { width: 100%; }
     <div class="problem-grid">
       <div class="problem-stats">
         <div class="problem-stat-card reveal">
-          <div class="problem-stat-number danger">£10k–£30k</div>
+          <div class="problem-stat-number danger">£10k to £30k</div>
           <div class="problem-stat-label">Typical monthly revenue at risk when high-intent enquiries go unanswered</div>
         </div>
         <div class="problem-stat-card reveal reveal-delay-1">
@@ -984,7 +992,7 @@ section { width: 100%; }
       <div class="problem-copy">
         <div class="eyebrow reveal">The Problem</div>
         <h2 class="reveal reveal-delay-1">These clients need treatment now.<br><em>If you don't answer, your competitor will.</em></h2>
-        <p class="reveal reveal-delay-2">You're mid-treatment. Your team is with a client. The phone rings, no one answers, and that caller — who was ready to book a £350 treatment — simply moves on. They don't leave a voicemail. They don't wait. They book the clinic down the road.</p>
+        <p class="reveal reveal-delay-2">You're mid-treatment. Your team is with a client. The phone rings, no one answers, and that caller - who was ready to book a £350 treatment - simply moves on. They don't leave a voicemail. They don't wait. They book the clinic down the road.</p>
         <p class="reveal reveal-delay-3">This happens <strong>eight times a day</strong> at the average aesthetic clinic. At £350 per treatment, that can mean <strong>£10,000 to £30,000 every single month</strong> walking out the door. Not because your treatments aren't excellent. Not because your prices are wrong. Simply because no one was there to answer first.</p>
         <p class="reveal reveal-delay-4">Studies confirm that clinics responding within five minutes convert <strong>eight times more bookings</strong> than those responding within an hour. Your reputation is built in the treatment room. Your revenue is decided before clients ever walk through the door.</p>
       </div>
@@ -998,30 +1006,30 @@ section { width: 100%; }
     <div class="solution-header">
       <div class="eyebrow reveal" style="justify-content:center;">The Solution</div>
       <h2 class="reveal reveal-delay-1">Everything your clinic needs.<br><em>Nothing you have to manage.</em></h2>
-      <p class="reveal reveal-delay-2">We build, install, and run the entire system. You do nothing differently — except watch your appointment book fill.</p>
+      <p class="reveal reveal-delay-2">We build, install, and run the entire system. You do nothing differently - except watch your appointment book fill.</p>
     </div>
     <div class="services-grid">
 
       <div class="service-card reveal">
-        <div class="service-number">01 — Core Service</div>
+        <div class="service-number">01 - Core Service</div>
         <h3>AI Receptionist</h3>
-        <p>Every missed call is answered within seconds by your AI receptionist. It has a natural, intelligent conversation with the potential client, answers their questions, and books the appointment directly into your calendar — 24 hours a day, 7 days a week. No human involvement required. No missed opportunities.</p>
+        <p>Every missed call is answered within seconds by your AI receptionist. It has a natural, intelligent conversation with the potential client, answers their questions, and books the appointment directly into your calendar - 24 hours a day, 7 days a week. No human involvement required. No missed opportunities.</p>
       </div>
 
       <div class="service-card reveal reveal-delay-1">
-        <div class="service-number">02 — Reputation</div>
+        <div class="service-number">02 - Reputation</div>
         <h3>Google Review Automation</h3>
         <p>After every appointment, your system automatically requests a review at exactly the right moment. Four and five-star reviews are posted publicly to Google, building your visibility and social proof. One to three-star feedback is captured privately, so it never damages your reputation. Your Google rating grows on autopilot.</p>
       </div>
 
       <div class="service-card reveal reveal-delay-2">
-        <div class="service-number">03 — Retention</div>
+        <div class="service-number">03 - Retention</div>
         <h3>Client Re-engagement</h3>
-        <p>Automated follow-up sequences work in the background at all times. Appointment reminders eliminate no-shows. Targeted promotions bring lapsed clients back. Personalised messages maximise client lifetime value — all without a single manual task from you or your team. Your existing client base becomes a reliable, recurring revenue stream.</p>
+        <p>Automated follow-up sequences work in the background at all times. Appointment reminders eliminate no-shows. Targeted promotions bring lapsed clients back. Personalised messages maximise client lifetime value - all without a single manual task from you or your team. Your existing client base becomes a reliable, recurring revenue stream.</p>
       </div>
 
       <div class="service-card reveal reveal-delay-3">
-        <div class="service-number">04 — Digital Presence</div>
+        <div class="service-number">04 - Digital Presence</div>
         <h3>Website with AI Chatbot</h3>
         <p>A fully designed, conversion-optimised website built specifically for your clinic, with an embedded AI chatbot that handles enquiries and converts website visitors into booked appointments around the clock. Premium design. Clear messaging. Built to turn browsers into bookings from the moment they land on your page.</p>
       </div>
@@ -1044,21 +1052,21 @@ section { width: 100%; }
         <div class="step-num">01</div>
         <div class="step-label">Step One</div>
         <h3>We build your system.</h3>
-        <p>We begin with a 30-minute onboarding call to understand your clinic, your services, your pricing, and how you like to communicate with clients. From there, we build and configure your entire AI receptionist system — tailored specifically to your clinic. No generic templates. No off-the-shelf software.</p>
+        <p>We begin with a 30-minute onboarding call to understand your clinic, your services, your pricing, and how you like to communicate with clients. From there, we build and configure your entire AI receptionist system - tailored specifically to your clinic. No generic templates. No off-the-shelf software.</p>
       </div>
 
       <div class="step-card reveal reveal-delay-1">
         <div class="step-num">02</div>
         <div class="step-label">Step Two</div>
         <h3>We install and go live.</h3>
-        <p>We connect your AI receptionist to your existing phone number and booking system within 48 hours. From this moment, every missed call is answered, every lead is followed up, and every appointment opportunity is captured. Your team doesn't change a thing. Your clients notice nothing unusual — except that you're suddenly always available.</p>
+        <p>We connect your AI receptionist to your existing phone number and booking system within 48 hours. From this moment, every missed call is answered, every lead is followed up, and every appointment opportunity is captured. Your team doesn't change a thing. Your clients notice nothing unusual - except that you're suddenly always available.</p>
       </div>
 
       <div class="step-card reveal reveal-delay-2">
         <div class="step-num">03</div>
         <div class="step-label">Step Three</div>
         <h3>You watch your bookings grow.</h3>
-        <p>Within the first 30 days, you'll see measurable improvement in captured bookings. We monitor, optimise, and manage the entire system on an ongoing basis — refining conversations, adjusting follow-up sequences, and reporting results to you monthly. We are accountable to outcomes, not effort.</p>
+        <p>Within the first 30 days, you'll see measurable improvement in captured bookings. We monitor, optimise, and manage the entire system on an ongoing basis - refining conversations, adjusting follow-up sequences, and reporting results to you monthly. We are accountable to outcomes, not effort.</p>
       </div>
 
     </div>
@@ -1071,7 +1079,7 @@ section { width: 100%; }
     <div class="trust-grid">
       <div class="trust-card reveal">
         <div class="trust-value"><span>24/7</span></div>
-        <div class="trust-label">Always on — no holidays, no sick days</div>
+        <div class="trust-label">Always on - no holidays, no sick days</div>
       </div>
       <div class="trust-card reveal reveal-delay-1">
         <div class="trust-value">60<span>s</span></div>
@@ -1117,7 +1125,7 @@ section { width: 100%; }
           <li>Monthly performance report</li>
           <li>30-day results guarantee</li>
         </ul>
-        <button class="pricing-cta" data-scroll-target="final-cta">Get Started</button>
+        <a class="pricing-cta" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Get Started</a>
       </div>
 
       <!-- Growth (featured) -->
@@ -1132,7 +1140,7 @@ section { width: 100%; }
         <div class="pricing-setup">Matched to your call volume and support needs</div>
         <hr class="pricing-divider">
         <ul class="pricing-features">
-          <li>Full AI call handling — every call answered</li>
+          <li>Full AI call handling - every call answered</li>
           <li>Automated booking directly into your calendar</li>
           <li>Call transcription and lead logging</li>
           <li>Google Review Automation</li>
@@ -1140,7 +1148,7 @@ section { width: 100%; }
           <li>Everything in Starter</li>
           <li>30-day results guarantee</li>
         </ul>
-        <button class="pricing-cta featured-cta" data-scroll-target="final-cta">Get Started</button>
+        <a class="pricing-cta featured-cta" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Get Started</a>
       </div>
 
       <!-- Full System -->
@@ -1155,14 +1163,14 @@ section { width: 100%; }
         <hr class="pricing-divider">
         <ul class="pricing-features">
           <li>Modern website, designed for your clinic</li>
-          <li>Embedded AI chatbot — 24/7 on your site</li>
+          <li>Embedded AI chatbot - 24/7 on your site</li>
           <li>Custom integrations with your systems</li>
           <li>Priority support and monthly strategy call</li>
           <li>Advanced analytics dashboard</li>
           <li>Everything in Growth</li>
           <li>30-day results guarantee</li>
         </ul>
-        <button class="pricing-cta" data-scroll-target="final-cta">Get Started</button>
+        <a class="pricing-cta" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Get Started</a>
       </div>
 
     </div>
@@ -1179,14 +1187,14 @@ section { width: 100%; }
           <div class="case-eyebrow reveal">Client Results</div>
           <h2 class="reveal reveal-delay-1"><em>18% revenue increase.</em><br>First month. Guaranteed.</h2>
           <p class="reveal reveal-delay-2">Le Petit Parisien saw an 18% increase in revenue in their very first month after implementing the ClinovaAI system. No new marketing spend. No new staff. No changes to how they operated.</p>
-          <p class="reveal reveal-delay-3">The system simply ensured that every enquiry that previously went unanswered was captured, followed up, and converted. Revenue that was already there — waiting to be collected.</p>
+          <p class="reveal reveal-delay-3">The system simply ensured that every enquiry that previously went unanswered was captured, followed up, and converted. Revenue that was already there - waiting to be collected.</p>
           <p class="reveal reveal-delay-4">This is the consistent pattern we see. Not because ClinovaAI is magic. Because the opportunity was already there. We just stopped it from disappearing.</p>
           <div class="case-client reveal reveal-delay-5">Le Petit Parisien · Deerfield Beach · First 30 days</div>
         </div>
         <div class="case-stats reveal reveal-delay-1">
           <div class="case-stat">
             <div class="case-stat-num">18%</div>
-            <div class="case-stat-label">Revenue increase — month one</div>
+            <div class="case-stat-label">Revenue increase - month one</div>
           </div>
           <div class="case-stat">
             <div class="case-stat-num">30</div>
@@ -1243,7 +1251,7 @@ section { width: 100%; }
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-a">
-          <div class="faq-a-inner">Your AI receptionist is trained to communicate in a warm, professional, and natural way — consistent with your clinic's brand and tone. Most clients simply experience a prompt, helpful response and don't question it further. If you prefer, the system can be transparent about being automated. We configure this entirely to your preference during onboarding.</div>
+          <div class="faq-a-inner">Your AI receptionist is trained to communicate in a warm, professional, and natural way - consistent with your clinic's brand and tone. Most clients simply experience a prompt, helpful response and don't question it further. If you prefer, the system can be transparent about being automated. We configure this entirely to your preference during onboarding.</div>
         </div>
       </div>
 
@@ -1253,7 +1261,7 @@ section { width: 100%; }
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-a">
-          <div class="faq-a-inner">We're typically live within 48 hours of your onboarding call. The onboarding itself takes 30 minutes. After that, we handle everything — configuration, integration with your booking system, testing, and going live. You don't need to do anything except confirm you're happy with how it sounds before we switch it on.</div>
+          <div class="faq-a-inner">We're typically live within 48 hours of your onboarding call. The onboarding itself takes 30 minutes. After that, we handle everything - configuration, integration with your booking system, testing, and going live. You don't need to do anything except confirm you're happy with how it sounds before we switch it on.</div>
         </div>
       </div>
 
@@ -1283,7 +1291,7 @@ section { width: 100%; }
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-a">
-          <div class="faq-a-inner">Before we begin, we agree specific, measurable targets with you — typically based on the number of previously missed enquiries that are now captured and converted within your first 30 days. If we don't hit those targets, we continue working at no additional charge until we do. There's no awkward conversation, no small print, no conditions. We're accountable to outcomes. If the results aren't there, neither is our invoice.</div>
+          <div class="faq-a-inner">Before we begin, we agree specific, measurable targets with you - typically based on the number of previously missed enquiries that are now captured and converted within your first 30 days. If we don't hit those targets, we continue working at no additional charge until we do. There's no awkward conversation, no small print, no conditions. We're accountable to outcomes. If the results aren't there, neither is our invoice.</div>
         </div>
       </div>
 
@@ -1298,7 +1306,7 @@ section { width: 100%; }
     <h2 class="reveal reveal-delay-1">Your clinic never<br><em>has to close again.</em></h2>
     <p class="reveal reveal-delay-2">Book a 30-minute discovery call. We'll review your current missed call volume, show you exactly what we'd build for your clinic, and give you a clear picture of what you can expect within 30 days.</p>
     <div class="btn-row reveal reveal-delay-3">
-      <button class="btn-primary" data-scroll-target="final-cta" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</button>
+      <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</a>
     </div>
     <p class="final-cta-note reveal reveal-delay-4">No commitment required · 30-minute call · Results within 30 days guaranteed</p>
   </div>
@@ -1309,13 +1317,7 @@ section { width: 100%; }
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <svg viewBox="0 0 148 32" fill="none" width="130" height="30">
-          <path d="M20 8 Q6 8 4 16 Q6 24 20 24" stroke="#0C9E8F" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <line x1="4" y1="16" x2="22" y2="16" stroke="#0C9E8F" stroke-width="0.8" opacity="0.3"/>
-          <circle cx="22" cy="16" r="2.2" fill="#B8935A"/>
-          <text x="32" y="22" font-family="Georgia, serif" font-size="17" font-weight="400" fill="#F6F3F0" letter-spacing="-0.4">Clinova</text>
-          <text x="105" y="22" font-family="Georgia, serif" font-size="17" font-weight="400" fill="#0C9E8F" letter-spacing="-0.4">AI</text>
-        </svg>
+        <img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="62" height="47">
         <p>The AI receptionist built for aesthetic clinics, med spas, and cosmetic practices across the UK. Never miss a booking again.</p>
       </div>
       <div>
@@ -1934,24 +1936,34 @@ a { color: inherit; text-decoration: none; }
   .promise-inner { padding: 0 20px; }
   .about-cta p { margin-bottom: 34px; }
 }
+
+
+/* Live brand logo */
+.brand-logo-mark {
+  display: block;
+  width: 58px;
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(184,147,90,0.12));
+}
+.footer .brand-logo-mark {
+  width: 62px;
+}
+@media (max-width: 900px) {
+  .brand-logo-mark { width: 46px; }
+  .footer .brand-logo-mark { width: 54px; }
+}
 `,
   body: `<!-- ══ NAV ══ -->
 <nav class="nav">
   <a href="/">
-    <svg viewBox="0 0 148 32" fill="none" width="148" height="32">
-      <path d="M20 8 Q6 8 4 16 Q6 24 20 24" stroke="#0C9E8F" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-      <line x1="4" y1="16" x2="22" y2="16" stroke="#0C9E8F" stroke-width="0.8" opacity="0.3"/>
-      <circle cx="22" cy="16" r="2.2" fill="#B8935A"/>
-      <text x="32" y="22" font-family="Georgia, serif" font-size="17" font-weight="400" fill="#F6F3F0" letter-spacing="-0.4">Clinova</text>
-      <text x="105" y="22" font-family="Georgia, serif" font-size="17" font-weight="400" fill="#0C9E8F" letter-spacing="-0.4">AI</text>
-    </svg>
+    <img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="58" height="42">
   </a>
   <div class="nav-links">
     <a class="nav-link" href="/#services">Services</a>
     <a class="nav-link" href="/#pricing">Pricing</a>
     <a class="nav-link active" href="/about">About</a>
     <a class="nav-link" href="/#faq">FAQ</a>
-    <button class="nav-cta" data-scroll-target="about-cta">Book a Call ↗</button>
+    <a class="nav-cta" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Call ↗</a>
   </div>
 </nav>
 
@@ -1962,9 +1974,9 @@ a { color: inherit; text-decoration: none; }
     <div>
       <div class="eyebrow reveal">About ClinovaAI</div>
       <h1 class="reveal reveal-delay-1">Built by an AI engineer.<br><em>Not a marketer.</em></h1>
-      <p class="about-hero-sub reveal reveal-delay-2">Most AI tools for clinics are built by people who discovered AI last year. ClinovaAI was built by someone who's been building AI systems since 2015 — a decade before it became a trend — and has deployed them at some of the world's most demanding technology companies.</p>
+      <p class="about-hero-sub reveal reveal-delay-2">Most AI tools for clinics are built by people who discovered AI last year. ClinovaAI was built by someone who's been building AI systems since 2015 - a decade before it became a trend - and has deployed them at some of the world's most demanding technology companies.</p>
       <div class="btn-row reveal reveal-delay-3">
-        <button class="btn-primary" data-scroll-target="about-cta">Book a Discovery Call ↗</button>
+        <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Discovery Call ↗</a>
         <a class="btn-outline" href="/">See Our Services</a>
       </div>
     </div>
@@ -1989,11 +2001,11 @@ a { color: inherit; text-decoration: none; }
     </div>
     <div class="cred-item reveal reveal-delay-1">
       <div class="cred-value"><span>2015</span></div>
-      <div class="cred-label">Working in AI since 2015 — a decade before it became a buzzword</div>
+      <div class="cred-label">Working in AI since 2015 - a decade before it became a buzzword</div>
     </div>
     <div class="cred-item reveal reveal-delay-2">
       <div class="cred-value" style="font-size:28px; padding-top:6px;">Stanford</div>
-      <div class="cred-label">AI studied at Stanford University — one of the world's leading programmes</div>
+      <div class="cred-label">AI studied at Stanford University - one of the world's leading programmes</div>
     </div>
     <div class="cred-item reveal reveal-delay-3">
       <div class="cred-value" style="font-size:28px; padding-top:6px;">Zendesk</div>
@@ -2008,10 +2020,10 @@ a { color: inherit; text-decoration: none; }
     <div class="story-grid">
       <div class="story-copy">
         <div class="eyebrow reveal">Our Story</div>
-        <h2 class="reveal reveal-delay-1">Why we built this — and why it matters that we did.</h2>
-        <p class="reveal reveal-delay-2">I didn't build ClinovaAI because AI became popular. I built it because I'd spent over a decade watching what AI could genuinely do inside businesses — and I noticed that the industries that needed it most were the ones being ignored entirely.</p>
-        <p class="reveal reveal-delay-3">Aesthetic clinics are run by extraordinary practitioners. Women who've invested years developing clinical skills, built loyal client relationships, and created businesses they're genuinely proud of. But <strong>the systems behind those businesses are broken.</strong> Phones going unanswered. Leads disappearing. Revenue evaporating — not because the clinic isn't excellent, but because no one built the infrastructure to capture it.</p>
-        <p class="reveal reveal-delay-4">The AI tools that exist either require a full-time technician to manage, or they're basic chatbots dressed up as something more. I knew there was a better way — because I'd built the better way, for companies like Zendesk, at enterprise scale.</p>
+        <h2 class="reveal reveal-delay-1">Why we built this - and why it matters that we did.</h2>
+        <p class="reveal reveal-delay-2">I didn't build ClinovaAI because AI became popular. I built it because I'd spent over a decade watching what AI could genuinely do inside businesses - and I noticed that the industries that needed it most were the ones being ignored entirely.</p>
+        <p class="reveal reveal-delay-3">Aesthetic clinics are run by extraordinary practitioners. Women who've invested years developing clinical skills, built loyal client relationships, and created businesses they're genuinely proud of. But <strong>the systems behind those businesses are broken.</strong> Phones going unanswered. Leads disappearing. Revenue evaporating - not because the clinic isn't excellent, but because no one built the infrastructure to capture it.</p>
+        <p class="reveal reveal-delay-4">The AI tools that exist either require a full-time technician to manage, or they're basic chatbots dressed up as something more. I knew there was a better way - because I'd built the better way, for companies like Zendesk, at enterprise scale.</p>
         <p class="reveal reveal-delay-5">ClinovaAI is what happens when genuine AI engineering meets a real, painful, specific problem. A system that actually works. That we build, install, and manage entirely. That pays for itself within the first month.</p>
       </div>
 
@@ -2030,20 +2042,20 @@ a { color: inherit; text-decoration: none; }
             <div class="timeline-year">Stanford</div>
             <div class="timeline-content">
               <h4>AI studies at Stanford University</h4>
-              <p>Trained in artificial intelligence at one of the world's foremost programmes — the same institution that shaped the engineers behind the tools the world now uses every day.</p>
+              <p>Trained in artificial intelligence at one of the world's foremost programmes - the same institution that shaped the engineers behind the tools the world now uses every day.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-year">Zendesk</div>
             <div class="timeline-content">
-              <h4>Silicon Valley — enterprise AI deployment</h4>
+              <h4>Silicon Valley - enterprise AI deployment</h4>
               <p>Built and deployed AI systems at Zendesk and other Silicon Valley companies at global scale. Enterprise-grade standards. Real accountability. Systems that couldn't afford to fail.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-year">2024</div>
             <div class="timeline-content">
-              <h4>ClinovaAI — focused on aesthetic clinics</h4>
+              <h4>ClinovaAI - focused on aesthetic clinics</h4>
               <p>12 years of engineering experience, deliberately focused on one specific problem: capturing the revenue that aesthetic clinics are losing every single day from missed calls and unanswered enquiries.</p>
             </div>
           </div>
@@ -2059,7 +2071,7 @@ a { color: inherit; text-decoration: none; }
     <div class="different-header">
       <div class="eyebrow reveal">What Makes Us Different</div>
       <h2 class="reveal reveal-delay-1">We are not a software tool.<br><em>We are a specialist service.</em></h2>
-      <p class="reveal reveal-delay-2">There's a significant difference between handing a clinic owner a piece of software and actually solving their problem. We do the latter — entirely.</p>
+      <p class="reveal reveal-delay-2">There's a significant difference between handing a clinic owner a piece of software and actually solving their problem. We do the latter - entirely.</p>
     </div>
     <div class="diff-grid">
       <div class="diff-card reveal">
@@ -2075,17 +2087,17 @@ a { color: inherit; text-decoration: none; }
       <div class="diff-card reveal reveal-delay-2">
         <div class="diff-num">03</div>
         <h3>Tailored to your clinic. Not templated.</h3>
-        <p>Every system is configured specifically to your clinic — your services, your pricing, your tone, your booking process. No generic scripts. No one-size-fits-all chatbots. <strong>A system that represents your brand</strong> as precisely as you do yourself.</p>
+        <p>Every system is configured specifically to your clinic - your services, your pricing, your tone, your booking process. No generic scripts. No one-size-fits-all chatbots. <strong>A system that represents your brand</strong> as precisely as you do yourself.</p>
       </div>
       <div class="diff-card reveal reveal-delay-3">
         <div class="diff-num">04</div>
         <h3>We're accountable to results.</h3>
-        <p>We don't measure success in deliverables. We measure it in captured bookings and recovered revenue. Our 30-day guarantee isn't a marketing line — it's the commercial model we hold ourselves to. <strong>If you don't see results, we don't get paid.</strong></p>
+        <p>We don't measure success in deliverables. We measure it in captured bookings and recovered revenue. Our 30-day guarantee isn't a marketing line - it's the commercial model we hold ourselves to. <strong>If you don't see results, we don't get paid.</strong></p>
       </div>
       <div class="diff-card reveal reveal-delay-4">
         <div class="diff-num">05</div>
         <h3>We understand your clients.</h3>
-        <p>Aesthetic clinic clients are discerning. They respond to warmth, to professionalism, to precision. Our AI receptionist is trained to communicate at the standard your brand demands — never robotic, <strong>never off-brand, never less than excellent.</strong></p>
+        <p>Aesthetic clinic clients are discerning. They respond to warmth, to professionalism, to precision. Our AI receptionist is trained to communicate at the standard your brand demands - never robotic, <strong>never off-brand, never less than excellent.</strong></p>
       </div>
       <div class="diff-card reveal reveal-delay-5">
         <div class="diff-num">06</div>
@@ -2103,9 +2115,9 @@ a { color: inherit; text-decoration: none; }
       <div class="expertise-copy">
         <div class="eyebrow reveal">The Engineering Behind It</div>
         <h2 class="reveal reveal-delay-1">This is what a decade of AI expertise <em>actually looks like.</em></h2>
-        <p class="reveal reveal-delay-2">The AI receptionist space is crowded with tools that use basic scripting and call it artificial intelligence. What we build is categorically different — the kind of AI that handles nuance, adapts to context, and gets better over time.</p>
+        <p class="reveal reveal-delay-2">The AI receptionist space is crowded with tools that use basic scripting and call it artificial intelligence. What we build is categorically different - the kind of AI that handles nuance, adapts to context, and gets better over time.</p>
         <p class="reveal reveal-delay-3">That capability comes directly from the engineering background behind ClinovaAI. <strong>Stanford-trained AI, refined across enterprise deployments at companies like Zendesk, and now applied with precision to the specific context of aesthetic clinic operations.</strong></p>
-        <p class="reveal reveal-delay-4">The result is a system sophisticated enough to handle the subtlety of your client conversations — yet invisible enough that clients simply experience a prompt, professional, and helpful response. Exactly what your brand deserves.</p>
+        <p class="reveal reveal-delay-4">The result is a system sophisticated enough to handle the subtlety of your client conversations - yet invisible enough that clients simply experience a prompt, professional, and helpful response. Exactly what your brand deserves.</p>
       </div>
       <div>
         <div class="expertise-logos">
@@ -2122,7 +2134,7 @@ a { color: inherit; text-decoration: none; }
           <div class="expertise-logo-card reveal reveal-delay-2">
             <div class="exp-logo-name">12 Years</div>
             <div class="exp-logo-role">Software Engineering</div>
-            <div class="exp-logo-desc">Not a recent convert to technology. A decade of building systems at the highest level — from Silicon Valley startups to global enterprises.</div>
+            <div class="exp-logo-desc">Not a recent convert to technology. A decade of building systems at the highest level - from Silicon Valley startups to global enterprises.</div>
           </div>
           <div class="expertise-logo-card reveal reveal-delay-3">
             <div class="exp-logo-name">Since 2015</div>
@@ -2141,9 +2153,9 @@ a { color: inherit; text-decoration: none; }
     <div class="promise-inner">
       <div class="eyebrow reveal" style="justify-content:center;">Our Commitment</div>
       <p class="promise-quote reveal reveal-delay-1">
-        "The clinics we work with deserve a system built by someone who actually understands AI — not one assembled from a template and sold with promises. <em>That's the standard we hold ourselves to.</em>"
+        "The clinics we work with deserve a system built by someone who actually understands AI - not one assembled from a template and sold with promises. <em>That's the standard we hold ourselves to.</em>"
       </p>
-      <div class="promise-attr reveal reveal-delay-2">Founder &amp; CEO — ClinovaAI · clinovaai.co</div>
+      <div class="promise-attr reveal reveal-delay-2">Founder &amp; CEO - ClinovaAI · clinovaai.co</div>
     </div>
   </div>
 </section>
@@ -2155,7 +2167,7 @@ a { color: inherit; text-decoration: none; }
     <h2 class="reveal reveal-delay-1">Ready to stop<br><em>losing bookings?</em></h2>
     <p class="reveal reveal-delay-2">Book a 30-minute discovery call. We'll review your current missed call volume, show you exactly what we'd build for your clinic, and give you a clear picture of what to expect within 30 days.</p>
     <div class="btn-row reveal reveal-delay-3">
-      <button class="btn-primary" data-scroll-target="about-cta" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</button>
+      <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</a>
       <a class="btn-outline" href="/">View Our Services</a>
     </div>
     <p class="reveal reveal-delay-4" style="margin-top:28px; font-size:12px; color:var(--cream-dim); opacity:0.4; letter-spacing:0.04em;">No commitment required · 30 minutes · 30-day results guaranteed</p>
@@ -2165,13 +2177,7 @@ a { color: inherit; text-decoration: none; }
 <!-- ══ FOOTER ══ -->
 <footer class="footer">
   <div class="footer-inner">
-    <svg viewBox="0 0 148 32" fill="none" width="120" height="26">
-      <path d="M20 8 Q6 8 4 16 Q6 24 20 24" stroke="#0C9E8F" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-      <line x1="4" y1="16" x2="22" y2="16" stroke="#0C9E8F" stroke-width="0.8" opacity="0.3"/>
-      <circle cx="22" cy="16" r="2.2" fill="#B8935A"/>
-      <text x="32" y="22" font-family="Georgia, serif" font-size="17" font-weight="400" fill="#F6F3F0" letter-spacing="-0.4">Clinova</text>
-      <text x="105" y="22" font-family="Georgia, serif" font-size="17" font-weight="400" fill="#0C9E8F" letter-spacing="-0.4">AI</text>
-    </svg>
+    <img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="62" height="47">
     <div class="footer-copy">© 2026 ClinovaAI Ltd · clinovaai.co</div>
     <div class="footer-tagline">"Never Miss a Booking Again"</div>
   </div>
@@ -2436,7 +2442,7 @@ export const brandKitPage = {
   .rule-card-title { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; }
   .rule-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .rule-list li { font-size: 13px; color: var(--cream-dim); line-height: 1.5; padding-left: 16px; position: relative; }
-  .rule-list li::before { content: '—'; position: absolute; left: 0; color: var(--teal); opacity: 0.6; }
+  .rule-list li::before { content: '-'; position: absolute; left: 0; color: var(--teal); opacity: 0.6; }
   .rule-list li.bad { color: #C47A7A; }
   .rule-list li.bad::before { color: #C47A7A; content: '✕'; font-size: 10px; top: 1px; }
 
@@ -2650,7 +2656,7 @@ export const brandKitPage = {
   .ds-stat-l { font-size: clamp(7px, 0.9vw, 9px); color: var(--cream-dim); opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
   .ds-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
   .ds-list-item { font-size: clamp(7px, 1vw, 10px); color: var(--cream-dim); padding-left: 12px; position: relative; line-height: 1.4; }
-  .ds-list-item::before { content: '—'; position: absolute; left: 0; color: var(--teal); font-size: 8px; }
+  .ds-list-item::before { content: '-'; position: absolute; left: 0; color: var(--teal); font-size: 8px; }
 
   /* ── PHOTOGRAPHY DIRECTION ── */
   .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 48px; }
@@ -2669,7 +2675,7 @@ export const brandKitPage = {
   /* ── DIVIDER ── */
   hr.fancy { border: none; border-top: 1px solid var(--rule); margin: 48px 0; }
 
-  /* ── SCROLL REVEAL (none — static) ── */
+  /* ── SCROLL REVEAL (none - static) ── */
   
   /* ── UTILITY ── */
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 48px; }
@@ -2722,7 +2728,7 @@ export const brandKitPage = {
 
   <!-- ── HERO ── -->
   <section class="hero" id="hero">
-    <div class="hero-eyebrow">ClinovaAI — Brand Identity System</div>
+    <div class="hero-eyebrow">ClinovaAI - Brand Identity System</div>
     <h1 class="hero-title">Where <em>luxury</em> meets intelligence.</h1>
     <p class="hero-sub">A complete brand kit for the AI receptionist built for aesthetic clinics, med spas, and cosmetic practices across the UK.</p>
     <div class="hero-tagline">"Never Miss a Booking Again"</div>
@@ -2736,9 +2742,9 @@ export const brandKitPage = {
   <!-- ── COLOURS ── -->
   <!-- ══════════════════════════════════════════ -->
   <section class="section" id="colours">
-    <div class="section-eyebrow">01 — Foundation</div>
+    <div class="section-eyebrow">01 - Foundation</div>
     <h2 class="section-title">Colour Palette</h2>
-    <p class="section-desc">Five colours. Every shade chosen to feel simultaneously medical-grade and luxury-grade — colours that belong in a Harley Street clinic and a Mayfair boutique in equal measure.</p>
+    <p class="section-desc">Five colours. Every shade chosen to feel simultaneously medical-grade and luxury-grade - colours that belong in a Harley Street clinic and a Mayfair boutique in equal measure.</p>
 
     <div class="palette-grid">
       <!-- Primary Teal -->
@@ -2808,21 +2814,21 @@ export const brandKitPage = {
       <div class="rule-card">
         <div class="rule-card-title">Usage Ratios</div>
         <ul class="rule-list">
-          <li>Obsidian — 60% of any composition. The dominant ground.</li>
-          <li>Clinova Teal — 20%. The signature. Use boldly on key elements.</li>
-          <li>Ivory — 15%. Text, UI labels, and light-on-dark contrast.</li>
-          <li>Warm Brass — 5%. Warmth injection. Rare, deliberate.</li>
-          <li>Forest — Surfaces, cards, subtle containers.</li>
+          <li>Obsidian - 60% of any composition. The dominant ground.</li>
+          <li>Clinova Teal - 20%. The signature. Use boldly on key elements.</li>
+          <li>Ivory - 15%. Text, UI labels, and light-on-dark contrast.</li>
+          <li>Warm Brass - 5%. Warmth injection. Rare, deliberate.</li>
+          <li>Forest - Surfaces, cards, subtle containers.</li>
         </ul>
       </div>
       <div class="rule-card">
         <div class="rule-card-title">Colour Combinations</div>
         <ul class="rule-list">
-          <li>Obsidian + Teal + Ivory — the hero combination.</li>
-          <li>Obsidian + Teal — minimal and authoritative.</li>
-          <li>Ivory + Obsidian — for print on light stock.</li>
-          <li class="bad">Never combine Brass + Teal in equal measure — they compete.</li>
-          <li class="bad">Never use white (#FFF) — use Ivory only.</li>
+          <li>Obsidian + Teal + Ivory - the hero combination.</li>
+          <li>Obsidian + Teal - minimal and authoritative.</li>
+          <li>Ivory + Obsidian - for print on light stock.</li>
+          <li class="bad">Never combine Brass + Teal in equal measure - they compete.</li>
+          <li class="bad">Never use white (#FFF) - use Ivory only.</li>
           <li class="bad">Never use neon or high-saturation teal. Stay deep.</li>
         </ul>
       </div>
@@ -2833,24 +2839,24 @@ export const brandKitPage = {
   <!-- ── TYPOGRAPHY ── -->
   <!-- ══════════════════════════════════════════ -->
   <section class="section" id="typography">
-    <div class="section-eyebrow">02 — Foundation</div>
+    <div class="section-eyebrow">02 - Foundation</div>
     <h2 class="section-title">Typography</h2>
-    <p class="section-desc">Two fonts. One voice. Playfair Display carries editorial authority. DM Sans delivers clinical clarity. Together they balance warmth and precision — exactly where ClinovaAI lives.</p>
+    <p class="section-desc">Two fonts. One voice. Playfair Display carries editorial authority. DM Sans delivers clinical clarity. Together they balance warmth and precision - exactly where ClinovaAI lives.</p>
 
     <div class="type-pair-grid">
       <div class="type-card" style="background:var(--dark-2); border:1px solid var(--rule);">
-        <div class="type-meta">Primary Typeface <span>Playfair Display — Google Fonts</span></div>
+        <div class="type-meta">Primary Typeface <span>Playfair Display - Google Fonts</span></div>
         <div style="font-family:var(--serif); font-size:56px; font-weight:500; color:var(--white); letter-spacing:-0.03em; line-height:1; margin-bottom:12px;">Aa</div>
-        <div style="font-family:var(--serif); font-size:18px; font-weight:400; font-style:italic; color:var(--cream-dim); margin-bottom:24px;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; . , : — " "</div>
+        <div style="font-family:var(--serif); font-size:18px; font-weight:400; font-style:italic; color:var(--cream-dim); margin-bottom:24px;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; . , : - " "</div>
         <div style="font-size:12px; color:var(--cream-dim); opacity:0.5; line-height:1.7;">
           Weights: 400 Regular · 500 Medium · 600 SemiBold · 700 Bold<br>
-          Use: Headlines H1–H4, pull quotes, large display text
+          Use: Headlines H1-H4, pull quotes, large display text
         </div>
       </div>
       <div class="type-card" style="background:var(--dark-2); border:1px solid var(--rule);">
-        <div class="type-meta">Secondary Typeface <span>DM Sans — Google Fonts</span></div>
+        <div class="type-meta">Secondary Typeface <span>DM Sans - Google Fonts</span></div>
         <div style="font-family:var(--sans); font-size:56px; font-weight:300; color:var(--white); letter-spacing:-0.04em; line-height:1; margin-bottom:12px;">Aa</div>
-        <div style="font-family:var(--sans); font-size:14px; font-weight:400; color:var(--cream-dim); margin-bottom:24px; letter-spacing:0.01em;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; . , : — " "</div>
+        <div style="font-family:var(--sans); font-size:14px; font-weight:400; color:var(--cream-dim); margin-bottom:24px; letter-spacing:0.01em;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; . , : - " "</div>
         <div style="font-size:12px; color:var(--cream-dim); opacity:0.5; line-height:1.7;">
           Weights: 300 Light · 400 Regular · 500 Medium · 600 SemiBold<br>
           Use: Body copy, UI labels, captions, buttons, navigation
@@ -2860,7 +2866,7 @@ export const brandKitPage = {
 
     <!-- Type Scale -->
     <div class="type-specimen">
-      <div class="type-meta">Type Scale — Complete Specification</div>
+      <div class="type-meta">Type Scale - Complete Specification</div>
       <div class="type-scale">
         <div class="type-scale-row">
           <span class="type-scale-label">H1<br><span style="opacity:0.5; font-size:9px;">64px / 500<br>−3% tracking</span></span>
@@ -2880,15 +2886,15 @@ export const brandKitPage = {
         </div>
         <div class="type-scale-row">
           <span class="type-scale-label">Body<br><span style="opacity:0.5; font-size:9px;">16px / 400<br>175% leading</span></span>
-          <span class="ts-body">ClinovaAI installs a done-for-you AI receptionist into your clinic — responding to enquiries, booking appointments, and following up with leads around the clock, so you never miss a revenue opportunity again.</span>
+          <span class="ts-body">ClinovaAI installs a done-for-you AI receptionist into your clinic - responding to enquiries, booking appointments, and following up with leads around the clock, so you never miss a revenue opportunity again.</span>
         </div>
         <div class="type-scale-row">
           <span class="type-scale-label">Small<br><span style="opacity:0.5; font-size:9px;">14px / 400<br>160% leading</span></span>
-          <span class="ts-small">Available 24/7 — when your clinic is closed, ClinovaAI is still working. Responding to enquiries within seconds, qualifying leads, and filling your appointment book.</span>
+          <span class="ts-small">Available 24/7 - when your clinic is closed, ClinovaAI is still working. Responding to enquiries within seconds, qualifying leads, and filling your appointment book.</span>
         </div>
         <div class="type-scale-row">
           <span class="type-scale-label">Caption<br><span style="opacity:0.5; font-size:9px;">12px / 400<br>+2% tracking</span></span>
-          <span class="ts-caption">Results within 30 days — guaranteed. No long-term contracts. Cancel anytime.</span>
+          <span class="ts-caption">Results within 30 days - guaranteed. No long-term contracts. Cancel anytime.</span>
         </div>
         <div class="type-scale-row">
           <span class="type-scale-label">Button<br><span style="opacity:0.5; font-size:9px;">13px / 600<br>+10% tracking UC</span></span>
@@ -2906,16 +2912,16 @@ export const brandKitPage = {
   <!-- ── LOGOS ── -->
   <!-- ══════════════════════════════════════════ -->
   <section class="section" id="logos">
-    <div class="section-eyebrow">03 — Identity</div>
+    <div class="section-eyebrow">03 - Identity</div>
     <h2 class="section-title">Logo Concepts</h2>
-    <p class="section-desc">Three distinct directions. Each references the intersection of AI intelligence, clinical precision, and human communication — without being literal. All work at any scale, on any background.</p>
+    <p class="section-desc">Three distinct directions. Each references the intersection of AI intelligence, clinical precision, and human communication - without being literal. All work at any scale, on any background.</p>
 
     <div class="logo-grid">
 
       <!-- CONCEPT 01: MERIDIAN -->
       <div>
         <div class="logo-card logo-card-dark">
-          <div class="logo-name">Concept 01 — Meridian</div>
+          <div class="logo-name">Concept 01 - Meridian</div>
           <div class="logo-display">
             <!-- Combination mark: Arc + wordmark -->
             <svg viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:220px;">
@@ -2958,7 +2964,7 @@ export const brandKitPage = {
       <!-- CONCEPT 02: LATTICE -->
       <div>
         <div class="logo-card logo-card-dark">
-          <div class="logo-name">Concept 02 — Lattice</div>
+          <div class="logo-name">Concept 02 - Lattice</div>
           <div class="logo-display">
             <svg viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:220px;">
               <!-- Icon: Connected nodes forming a C shape -->
@@ -2982,7 +2988,7 @@ export const brandKitPage = {
               <text x="74" y="50" font-family="Arial, sans-serif" font-size="7" font-weight="400" fill="#C8BEB3" letter-spacing="3">RECEPTIONIST PLATFORM</text>
             </svg>
           </div>
-          <div class="logo-desc">Interconnected nodes in a C-arc formation. References AI neural networks, data connectivity, and the web of client relationships a clinic manages — elegant and intelligent.</div>
+          <div class="logo-desc">Interconnected nodes in a C-arc formation. References AI neural networks, data connectivity, and the web of client relationships a clinic manages - elegant and intelligent.</div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px;">
           <div class="logo-variant-card">
@@ -3022,7 +3028,7 @@ export const brandKitPage = {
       <!-- CONCEPT 03: AXIS -->
       <div>
         <div class="logo-card logo-card-dark">
-          <div class="logo-name">Concept 03 — Axis</div>
+          <div class="logo-name">Concept 03 - Axis</div>
           <div class="logo-display">
             <svg viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:220px;">
               <!-- Icon: Geometric C with single horizontal line = reception desk + AI horizon -->
@@ -3036,7 +3042,7 @@ export const brandKitPage = {
               <text x="72" y="50" font-family="Arial, sans-serif" font-size="7" font-weight="400" fill="#C8BEB3" letter-spacing="3">RECEPTIONIST PLATFORM</text>
             </svg>
           </div>
-          <div class="logo-desc">A refined C-form bisected by a precise horizontal — the reception desk as a line of authority. The brass terminal dot adds warmth. Minimal, typographic, confident.</div>
+          <div class="logo-desc">A refined C-form bisected by a precise horizontal - the reception desk as a line of authority. The brass terminal dot adds warmth. Minimal, typographic, confident.</div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px;">
           <div class="logo-variant-card">
@@ -3065,7 +3071,7 @@ export const brandKitPage = {
   <!-- ── LOGO USAGE ── -->
   <!-- ══════════════════════════════════════════ -->
   <section class="section" id="usage">
-    <div class="section-eyebrow">04 — Identity</div>
+    <div class="section-eyebrow">04 - Identity</div>
     <h2 class="section-title">Logo Usage</h2>
     <p class="section-desc">Rules that protect the brand. Consistency is what separates luxury brands from everything else.</p>
 
@@ -3075,7 +3081,7 @@ export const brandKitPage = {
         <ul class="rule-list">
           <li>Combination mark: minimum 160px wide / 32mm print</li>
           <li>Wordmark only: minimum 100px wide / 20mm print</li>
-          <li>Icon mark: minimum 24px / 8mm — never smaller</li>
+          <li>Icon mark: minimum 24px / 8mm - never smaller</li>
           <li>Favicon/app icon: icon mark only at 32×32px or larger</li>
         </ul>
       </div>
@@ -3091,10 +3097,10 @@ export const brandKitPage = {
       <div class="rule-card">
         <div class="rule-card-title">Approved Backgrounds</div>
         <ul class="rule-list">
-          <li>Obsidian (#080C0B) — primary, preferred</li>
-          <li>Forest (#162019) — approved, strong</li>
-          <li>Ivory (#F0E8DC) — approved, use teal-dark version</li>
-          <li>Photography — only on dark areas with sufficient contrast</li>
+          <li>Obsidian (#080C0B) - primary, preferred</li>
+          <li>Forest (#162019) - approved, strong</li>
+          <li>Ivory (#F0E8DC) - approved, use teal-dark version</li>
+          <li>Photography - only on dark areas with sufficient contrast</li>
         </ul>
       </div>
       <div class="rule-card">
@@ -3148,7 +3154,7 @@ export const brandKitPage = {
   <!-- ── UI COMPONENTS ── -->
   <!-- ══════════════════════════════════════════ -->
   <section class="section" id="components">
-    <div class="section-eyebrow">05 — Design System</div>
+    <div class="section-eyebrow">05 - Design System</div>
     <h2 class="section-title">UI Components</h2>
     <p class="section-desc">A component library rooted in the brand. Sharp geometry, teal glow on key interactions, and generous negative space throughout.</p>
 
@@ -3165,7 +3171,7 @@ export const brandKitPage = {
         <a class="nav-link-demo" href="#">Pricing</a>
         <a class="nav-link-demo" href="#">About</a>
       </div>
-      <button class="btn-primary" style="font-size:11px; padding:10px 20px;">Book a Call</button>
+      <a class="btn-primary" style="font-size:11px; padding:10px 20px;" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Call</a>
     </div>
     <p class="note">Navigation: 64px height · blur backdrop · 1px bottom rule · no heavy borders</p>
     <hr class="fancy">
@@ -3175,9 +3181,9 @@ export const brandKitPage = {
     <div class="hero-strip" style="margin-bottom:2px;">
       <div class="hero-strip-eyebrow">AI Receptionist Platform</div>
       <h2 class="hero-strip-title">Your clinic,<br><em>on autopilot.</em></h2>
-      <p class="hero-strip-body">ClinovaAI installs a done-for-you AI receptionist that responds, books, and follows up — 24 hours a day, 7 days a week.</p>
+      <p class="hero-strip-body">ClinovaAI installs a done-for-you AI receptionist that responds, books, and follows up - 24 hours a day, 7 days a week.</p>
       <div style="display:flex; gap:16px; flex-wrap:wrap;">
-        <button class="btn-primary">Book a Discovery Call</button>
+        <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a>
         <button class="btn-secondary">See How It Works</button>
       </div>
     </div>
@@ -3187,7 +3193,7 @@ export const brandKitPage = {
     <div style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--teal); margin-bottom:16px;">Buttons</div>
     <div class="rule-card" style="margin-bottom:2px;">
       <div class="btn-row">
-        <button class="btn-primary">Book a Call ↗</button>
+        <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Call ↗</a>
         <button class="btn-secondary">Learn More</button>
         <button class="btn-ghost">View Results →</button>
       </div>
@@ -3236,7 +3242,7 @@ export const brandKitPage = {
         <input class="input-demo" type="text" placeholder="e.g. Lumina Aesthetics">
         <label class="input-label">Email Address</label>
         <input class="input-demo" type="email" placeholder="hello@youraesthetics.co.uk">
-        <button class="btn-primary" style="width:100%; justify-content:center; margin-top:8px;">Get Started</button>
+        <a class="btn-primary" style="width:100%; justify-content:center; margin-top:8px;" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Get Started</a>
       </div>
     </div>
   </section>
@@ -3245,9 +3251,9 @@ export const brandKitPage = {
   <!-- ── PHOTOGRAPHY ── -->
   <!-- ══════════════════════════════════════════ -->
   <section class="section" id="photography">
-    <div class="section-eyebrow">06 — Design System</div>
+    <div class="section-eyebrow">06 - Design System</div>
     <h2 class="section-title">Photography Direction</h2>
-    <p class="section-desc">Imagery that earns trust before a word is read. Every photograph should feel like it belongs in a Sunday Times Style supplement — not a medical directory.</p>
+    <p class="section-desc">Imagery that earns trust before a word is read. Every photograph should feel like it belongs in a Sunday Times Style supplement - not a medical directory.</p>
 
     <div class="photo-grid">
       <div class="photo-placeholder">
@@ -3292,21 +3298,21 @@ export const brandKitPage = {
       <div class="rule-card">
         <div class="rule-card-title">Always</div>
         <ul class="rule-list">
-          <li>High contrast, intentional lighting — lit scenes, not flat</li>
+          <li>High contrast, intentional lighting - lit scenes, not flat</li>
           <li>Tight crops that feel editorial and confident</li>
-          <li>Warm skin tones — flattering, healthy, luminous</li>
+          <li>Warm skin tones - flattering, healthy, luminous</li>
           <li>Modern clinic environments: stone, marble, matte surfaces</li>
-          <li>Desaturate slightly in post — let teal do the colour work</li>
+          <li>Desaturate slightly in post - let teal do the colour work</li>
         </ul>
       </div>
       <div class="rule-card">
         <div class="rule-card-title">Never</div>
         <ul class="rule-list">
-          <li class="bad">Obvious stock photography — posed smiles, generic settings</li>
+          <li class="bad">Obvious stock photography - posed smiles, generic settings</li>
           <li class="bad">Before/after clinical photos in brand materials</li>
-          <li class="bad">Brightly lit, overexposed images — no blown highlights</li>
+          <li class="bad">Brightly lit, overexposed images - no blown highlights</li>
           <li class="bad">Busy, cluttered backgrounds</li>
-          <li class="bad">Imagery that codes as "cheap tech" — no robots, chat bubbles</li>
+          <li class="bad">Imagery that codes as "cheap tech" - no robots, chat bubbles</li>
         </ul>
       </div>
     </div>
@@ -3316,9 +3322,9 @@ export const brandKitPage = {
   <!-- ── BUSINESS CARD ── -->
   <!-- ══════════════════════════════════════════ -->
   <section class="section" id="bizcard">
-    <div class="section-eyebrow">07 — Collateral</div>
+    <div class="section-eyebrow">07 - Collateral</div>
     <h2 class="section-title">Business Card</h2>
-    <p class="section-desc">Standard 85×55mm. Printed on 600gsm uncoated stock with teal foil on the logotype. The dark card is the flagship — it should feel expensive to hold.</p>
+    <p class="section-desc">Standard 85×55mm. Printed on 600gsm uncoated stock with teal foil on the logotype. The dark card is the flagship - it should feel expensive to hold.</p>
 
     <div class="card-wrapper">
       <!-- Dark card front -->
@@ -3389,7 +3395,7 @@ export const brandKitPage = {
 
     <div style="padding:20px 32px; background:var(--dark-2); border:1px solid var(--rule); font-size:13px; color:var(--cream-dim); line-height:1.8;">
       <strong style="color:var(--cream); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; font-weight:600;">Print Specification</strong><br>
-      Size: 85×55mm · Stock: 600gsm uncoated or silk (dark card) · 350gsm uncoated cream (light card) · Finish: Spot teal foil on logotype + teal/brass gradient rule · No laminate on the uncoated stock — the tactile quality is part of the brand.
+      Size: 85×55mm · Stock: 600gsm uncoated or silk (dark card) · 350gsm uncoated cream (light card) · Finish: Spot teal foil on logotype + teal/brass gradient rule · No laminate on the uncoated stock - the tactile quality is part of the brand.
     </div>
   </section>
 
@@ -3397,9 +3403,9 @@ export const brandKitPage = {
   <!-- ── EMAIL SIGNATURE ── -->
   <!-- ══════════════════════════════════════════ -->
   <section class="section" id="emailsig">
-    <div class="section-eyebrow">08 — Collateral</div>
+    <div class="section-eyebrow">08 - Collateral</div>
     <h2 class="section-title">Email Signature</h2>
-    <p class="section-desc">Every email is a brand touchpoint. The signature should feel like the footer of a luxury website — not an afterthought.</p>
+    <p class="section-desc">Every email is a brand touchpoint. The signature should feel like the footer of a luxury website - not an afterthought.</p>
 
     <div class="email-sig-wrap">
       <div class="email-sig">
@@ -3422,16 +3428,16 @@ export const brandKitPage = {
         </div>
       </div>
     </div>
-    <p class="note">Signature uses table-based HTML for maximum email client compatibility. Font falls back to Georgia. Teal rendered as inline colour — no web fonts in email.</p>
+    <p class="note">Signature uses table-based HTML for maximum email client compatibility. Font falls back to Georgia. Teal rendered as inline colour - no web fonts in email.</p>
   </section>
 
   <!-- ══════════════════════════════════════════ -->
   <!-- ── SOCIAL MEDIA ── -->
   <!-- ══════════════════════════════════════════ -->
   <section class="section" id="social">
-    <div class="section-eyebrow">09 — Collateral</div>
+    <div class="section-eyebrow">09 - Collateral</div>
     <h2 class="section-title">Social Media Kit</h2>
-    <p class="section-desc">Designed for Instagram first. Every post should look like editorial content — not an ad. The grid should feel like a mood board for a premium clinic.</p>
+    <p class="section-desc">Designed for Instagram first. Every post should look like editorial content - not an ad. The grid should feel like a mood board for a premium clinic.</p>
 
     <div class="social-grid">
       <!-- Post 1 -->
@@ -3512,9 +3518,9 @@ export const brandKitPage = {
   <!-- ── PITCH DECK ── -->
   <!-- ══════════════════════════════════════════ -->
   <section class="section" id="pitchdeck">
-    <div class="section-eyebrow">10 — Collateral</div>
+    <div class="section-eyebrow">10 - Collateral</div>
     <h2 class="section-title">Pitch Deck Template</h2>
-    <p class="section-desc">Eight slide layouts. Dark-first. Every slide should feel like a considered design decision — not a template filled in. Large numbers, confident type, minimal copy per slide.</p>
+    <p class="section-desc">Eight slide layouts. Dark-first. Every slide should feel like a considered design decision - not a template filled in. Large numbers, confident type, minimal copy per slide.</p>
 
     <div class="deck-preview">
 
@@ -3537,7 +3543,7 @@ export const brandKitPage = {
             <div class="ds-list">
               <div class="ds-list-item">62% of clinic enquiries arrive outside opening hours</div>
               <div class="ds-list-item">94% of missed calls never call back</div>
-              <div class="ds-list-item">Manual follow-up takes 3–5 hours per week per staff member</div>
+              <div class="ds-list-item">Manual follow-up takes 3-5 hours per week per staff member</div>
               <div class="ds-list-item">Average aesthetic clinic loses £4,200/month to missed leads</div>
             </div>
           </div>
@@ -3588,7 +3594,7 @@ export const brandKitPage = {
 
     <div style="padding:24px 32px; background:var(--dark-2); border:1px solid var(--rule); font-size:13px; color:var(--cream-dim); line-height:1.8;">
       <strong style="color:var(--cream); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; font-weight:600;">Full Slide Set Includes</strong><br>
-      Title · Problem · Solution · How It Works · Social Proof / Results · Pricing · Objection Handler · CTA Close — all with matching dark/teal treatment. Available as Keynote and PowerPoint templates.
+      Title · Problem · Solution · How It Works · Social Proof / Results · Pricing · Objection Handler · CTA Close - all with matching dark/teal treatment. Available as Keynote and PowerPoint templates.
     </div>
   </section>
 
@@ -3596,9 +3602,9 @@ export const brandKitPage = {
   <!-- ── BRAND VOICE ── -->
   <!-- ══════════════════════════════════════════ -->
   <section class="section" id="voice">
-    <div class="section-eyebrow">11 — Voice &amp; Tone</div>
+    <div class="section-eyebrow">11 - Voice &amp; Tone</div>
     <h2 class="section-title">Brand Voice</h2>
-    <p class="section-desc">ClinovaAI speaks like a specialist consultant — not a salesperson. Calm, precise, results-focused. Every word earns its place.</p>
+    <p class="section-desc">ClinovaAI speaks like a specialist consultant - not a salesperson. Calm, precise, results-focused. Every word earns its place.</p>
 
     <!-- Pillars -->
     <div style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--teal); margin-bottom:20px;">Voice Pillars</div>
@@ -3683,7 +3689,7 @@ export const brandKitPage = {
         <ul class="rule-list">
           <li class="bad">Our revolutionary AI-powered platform will supercharge your bookings!</li>
           <li class="bad">Unlock your clinic's hidden potential with cutting-edge automation.</li>
-          <li class="bad">It's super easy to get started — just sign up and you're good to go!!</li>
+          <li class="bad">It's super easy to get started - just sign up and you're good to go!!</li>
           <li class="bad">Hey girl! Ready to scale your clinic to the next level? 🚀</li>
         </ul>
       </div>
@@ -3712,7 +3718,7 @@ export const brandKitPage = {
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2px;">
       <div class="rule-card" style="padding:24px;">
         <div class="rule-card-title">Email Tone</div>
-        <div style="font-size:13px; color:var(--cream-dim); line-height:1.7;">Formal but warm. Short paragraphs. Lead with the outcome. No bulk-mail feel — each email should read like it was written for one person.</div>
+        <div style="font-size:13px; color:var(--cream-dim); line-height:1.7;">Formal but warm. Short paragraphs. Lead with the outcome. No bulk-mail feel - each email should read like it was written for one person.</div>
       </div>
       <div class="rule-card" style="padding:24px;">
         <div class="rule-card-title">Social Tone</div>

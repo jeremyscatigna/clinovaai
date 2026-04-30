@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 
 export type BrandColor = {
   name: string;
@@ -18,16 +19,16 @@ export const brandColors: BrandColor[] = [
 ];
 
 export function BrandLogo({ compact = false }: { compact?: boolean }) {
-  const width = compact ? 100 : 148;
+  const width = compact ? 46 : 58;
 
   return (
-    <svg viewBox="0 0 148 32" fill="none" width={width} height={compact ? 22 : 32} aria-label="ClinovaAI">
-      <path d="M16 4C9.373 4 4 9.373 4 16s5.373 12 12 12c4.418 0 8.28-2.39 10.36-5.946" stroke="#0C9E8F" strokeWidth="2" strokeLinecap="round" />
-      <path d="M16 10a6 6 0 100 12 6 6 0 000-12z" stroke="#B8935A" strokeWidth="1.5" />
-      <path d="M32 16h12" stroke="#0C9E8F" strokeWidth="2" strokeLinecap="round" />
-      <text x="52" y="21" fill="#F0E8DC" fontFamily="var(--font-playfair), Georgia, serif" fontSize="18" fontWeight="500">Clinova</text>
-      <text x="116" y="21" fill="#0C9E8F" fontFamily="var(--font-dm-sans), system-ui, sans-serif" fontSize="14" fontWeight="600">AI</text>
-    </svg>
+    <Image
+      src="/brand/clinova-logo-mark.svg"
+      alt="ClinovaAI"
+      width={width}
+      height={compact ? 33 : 42}
+      style={{ display: "block", height: "auto" }}
+    />
   );
 }
 

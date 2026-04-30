@@ -364,12 +364,49 @@ const aboutResponsiveCss = `
 }
 `;
 
-const patchLanding = (body) =>
+const liveLogoCss = `
+
+/* Live brand logo */
+.brand-logo-mark {
+  display: block;
+  width: 58px;
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(184,147,90,0.12));
+}
+.footer .brand-logo-mark {
+  width: 62px;
+}
+@media (max-width: 900px) {
+  .brand-logo-mark { width: 46px; }
+  .footer .brand-logo-mark { width: 54px; }
+}
+`;
+
+const navLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="58" height="42">';
+const footerLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.svg" alt="ClinovaAI" width="62" height="47">';
+const bookingUrl = "https://calendly.com/clinova/lost-revenue-audit";
+
+const removeLongDashes = (value) => value.replace(/[\u2013\u2014]/g, "-");
+
+const replaceLiveLogos = (body) =>
   body
+    .replace(/<svg viewBox="0 0 148 32" fill="none" width="148" height="32">[\s\S]*?<\/svg>/g, navLogo)
+    .replace(/<svg viewBox="0 0 148 32" fill="none" width="130" height="30">[\s\S]*?<\/svg>/g, footerLogo)
+    .replace(/<svg viewBox="0 0 148 32" fill="none" width="120" height="26">[\s\S]*?<\/svg>/g, footerLogo);
+
+const linkBookingCtas = (body) =>
+  body.replace(
+    /<button([^>]*) data-scroll-target="(?:final-cta|about-cta)"([^>]*)>([\s\S]*?)<\/button>/g,
+    `<a$1 href="${bookingUrl}" target="_blank" rel="noopener noreferrer"$2>$3</a>`,
+  );
+
+const patchLanding = (body) =>
+  linkBookingCtas(
+    replaceLiveLogos(body)
     .replace('<a class="nav-logo" href="#">', '<a class="nav-logo" href="/">')
     .replace('<a class="nav-link" href="#pricing">Pricing</a>\n    <a class="nav-link" href="#faq">FAQ</a>', '<a class="nav-link" href="#pricing">Pricing</a>\n    <a class="nav-link" href="/about">About</a>\n    <a class="nav-link" href="#faq">FAQ</a>')
     .replace('Your clinic is losing<br><em>£21,000 every month.</em><br>We stop that.', 'Your clinic is losing<br><em>£10,000 to £30,000 every month.</em><br>We stop that.')
-    .replace('<div class="problem-stat-number danger">£21,000</div>\n          <div class="problem-stat-label">Average monthly revenue lost by aesthetic clinics from missed calls alone</div>', '<div class="problem-stat-number danger">£10k–£30k</div>\n          <div class="problem-stat-label">Typical monthly revenue at risk when high-intent enquiries go unanswered</div>')
+    .replace('<div class="problem-stat-number danger">£21,000</div>\n          <div class="problem-stat-label">Average monthly revenue lost by aesthetic clinics from missed calls alone</div>', '<div class="problem-stat-number danger">£10k to £30k</div>\n          <div class="problem-stat-label">Typical monthly revenue at risk when high-intent enquiries go unanswered</div>')
     .replace("The clients you're losing aren't going elsewhere.<br><em>They're going unanswered.</em>", "These clients need treatment now.<br><em>If you don't answer, your competitor will.</em>")
     .replace("This happens <strong>eight times a day</strong> at the average aesthetic clinic. At £350 per treatment, that's <strong>over £21,000 every single month</strong> walking out the door. Not because your treatments aren't excellent. Not because your prices are wrong. Simply because no one was there to answer.", "This happens <strong>eight times a day</strong> at the average aesthetic clinic. At £350 per treatment, that can mean <strong>£10,000 to £30,000 every single month</strong> walking out the door. Not because your treatments aren't excellent. Not because your prices are wrong. Simply because no one was there to answer first.")
     .replace('Transparent pricing.<br><em>Measurable returns.</em>', 'Built around your clinic.<br><em>Scoped on a call.</em>')
@@ -390,10 +427,12 @@ const patchLanding = (body) =>
     .replace('<a class="footer-link" href="#">Pricing</a>', '<a class="footer-link" href="#pricing">Pricing</a>')
     .replace('<a class="footer-link" href="#">Contact</a>', '<a class="footer-link" href="#final-cta">Contact</a>')
     .replaceAll('onclick="document.getElementById(\'final-cta\').scrollIntoView()"', 'data-scroll-target="final-cta"')
-    .replaceAll('onclick="document.getElementById(\'how\').scrollIntoView()"', 'data-scroll-target="how"');
+    .replaceAll('onclick="document.getElementById(\'how\').scrollIntoView()"', 'data-scroll-target="how"'),
+  );
 
 const patchAbout = (body) =>
-  body
+  linkBookingCtas(
+    replaceLiveLogos(body)
     .replaceAll('href="Landing Page.html#services"', 'href="/#services"')
     .replaceAll('href="Landing Page.html#pricing"', 'href="/#pricing"')
     .replaceAll('href="Landing Page.html#faq"', 'href="/#faq"')
@@ -401,12 +440,14 @@ const patchAbout = (body) =>
     .replace('<button class="btn-primary" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</button>', '<button class="btn-primary" onclick="document.getElementById(\'about-cta\').scrollIntoView()" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</button>')
     .replaceAll('href="#"', 'href="/about"')
     .replaceAll('src="uploads/ProfilePic.jpg"', 'src="/uploads/ProfilePic.jpg"')
-    .replaceAll('onclick="document.getElementById(\'about-cta\').scrollIntoView()"', 'data-scroll-target="about-cta"');
+    .replaceAll('onclick="document.getElementById(\'about-cta\').scrollIntoView()"', 'data-scroll-target="about-cta"'),
+  );
 
 const patchBrandKit = (body) =>
   body
     .replace('<div class="layout">', '<div class="layout design-system-layout">')
-    .replace("The <em>clients you're losing</em> aren't going elsewhere. They're just going unanswered.", "The <em>clients you're losing</em> need treatment now. If you don't answer, your competitor will.");
+    .replace("The <em>clients you're losing</em> aren't going elsewhere. They're just going unanswered.", "The <em>clients you're losing</em> need treatment now. If you don't answer, your competitor will.")
+    .replace(/<button([^>]*)>(Book a (?:Call|Discovery Call)(?: ↗)?|Get Started)<\/button>/g, `<a$1 href="${bookingUrl}" target="_blank" rel="noopener noreferrer">$2</a>`);
 
 mkdirSync(generatedRoot, { recursive: true });
 mkdirSync(join(projectRoot, "public", "uploads"), { recursive: true });
@@ -417,18 +458,18 @@ const about = extract("About.html");
 const brandKit = extract("Brand Kit.html");
 
 const contents = `export const landingPage = {
-  css: \`${escapeTemplate(`${withFontVars(landing.css)}${landingResponsiveCss}`)}\`,
-  body: \`${escapeTemplate(patchLanding(landing.body))}\`,
+  css: \`${escapeTemplate(removeLongDashes(`${withFontVars(landing.css)}${landingResponsiveCss}${liveLogoCss}`))}\`,
+  body: \`${escapeTemplate(removeLongDashes(patchLanding(landing.body)))}\`,
 } as const;
 
 export const aboutPage = {
-  css: \`${escapeTemplate(`${withFontVars(about.css)}${aboutResponsiveCss}`)}\`,
-  body: \`${escapeTemplate(patchAbout(about.body))}\`,
+  css: \`${escapeTemplate(removeLongDashes(`${withFontVars(about.css)}${aboutResponsiveCss}${liveLogoCss}`))}\`,
+  body: \`${escapeTemplate(removeLongDashes(patchAbout(about.body)))}\`,
 } as const;
 
 export const brandKitPage = {
-  css: \`${escapeTemplate(withFontVars(brandKit.css))}\`,
-  body: \`${escapeTemplate(patchBrandKit(brandKit.body))}\`,
+  css: \`${escapeTemplate(removeLongDashes(withFontVars(brandKit.css)))}\`,
+  body: \`${escapeTemplate(removeLongDashes(patchBrandKit(brandKit.body)))}\`,
 } as const;
 `;
 
