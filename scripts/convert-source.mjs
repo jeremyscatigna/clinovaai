@@ -483,7 +483,7 @@ mkdirSync(generatedRoot, { recursive: true });
 mkdirSync(join(projectRoot, "public", "uploads"), { recursive: true });
 mkdirSync(join(projectRoot, "public", "brand"), { recursive: true });
 copyFileSync(join(sourceRoot, "uploads", "ProfilePic.jpg"), join(projectRoot, "public", "uploads", "ProfilePic.jpg"));
-copyFileSync("/Users/jeremyscatigna/Downloads/30dayguarantee.png", join(projectRoot, "public", "brand", "30dayguarantee.png"));
+copyFileSync("/Users/jeremyscatigna/Downloads/30days.png", join(projectRoot, "public", "brand", "30dayguarantee.png"));
 
 const landing = extract("Landing Page.html");
 const about = extract("About.html");
