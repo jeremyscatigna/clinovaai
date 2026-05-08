@@ -980,7 +980,7 @@ section { width: 100%; }
     <a class="nav-link" href="#pricing">Pricing</a>
     <a class="nav-link" href="/about">About</a>
     <a class="nav-link" href="#faq">FAQ</a>
-    <a class="nav-cta" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Call ↗</a>
+    <a class="nav-cta" href="/book-demo">Book a Call ↗</a>
   </div>
 </nav>
 
@@ -997,7 +997,7 @@ section { width: 100%; }
       ClinovaAI installs a done-for-you AI receptionist into your clinic - answering every missed call, booking every appointment, 24 hours a day, 7 days a week. You do nothing differently. Except watch your calendar fill.
     </p>
     <div class="btn-row reveal reveal-delay-3">
-      <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Discovery Call ↗</a>
+      <a class="btn-primary" href="/book-demo">Book a Discovery Call ↗</a>
       <button class="btn-outline" data-scroll-target="how">See How It Works</button>
     </div>
     <div class="hero-proof reveal reveal-delay-4">
@@ -1195,7 +1195,7 @@ section { width: 100%; }
           <li>Basic reporting</li>
         </ul>
         <p class="pricing-card-note">This stops you losing easy revenue from missed calls.</p>
-        <a class="pricing-cta" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Get Started</a>
+        <a class="pricing-cta" href="/book-demo">Get Started</a>
       </div>
 
       <div class="pricing-card featured reveal reveal-delay-1">
@@ -1217,7 +1217,7 @@ section { width: 100%; }
           <li>Booking optimisation<span class="pricing-feature-note">Reduces drop-offs and increases the percentage of enquiries that turn into appointments.</span></li>
         </ul>
         <p class="pricing-card-note">This is where your system shifts from recovering missed opportunities to consistently generating new bookings on autopilot.</p>
-        <a class="pricing-cta featured-cta" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Get Started</a>
+        <a class="pricing-cta featured-cta" href="/book-demo">Get Started</a>
       </div>
 
       <div class="pricing-card reveal reveal-delay-2">
@@ -1240,7 +1240,7 @@ section { width: 100%; }
           <li>Priority support and ongoing optimisation<span class="pricing-feature-note">Faster response times and continuous improvements to increase performance.</span></li>
         </ul>
         <p class="pricing-card-note">This is how you dominate your local market and automate your entire front-end, so no lead is missed and bookings run consistently without extra manual effort.</p>
-        <a class="pricing-cta" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Get Started</a>
+        <a class="pricing-cta" href="/book-demo">Get Started</a>
       </div>
 
     </div>
@@ -1370,7 +1370,7 @@ section { width: 100%; }
     <h2 class="reveal reveal-delay-1">Your clinic never<br><em>has to close again.</em></h2>
     <p class="reveal reveal-delay-2">Book a 30-minute discovery call. We'll review your current missed call volume, show you exactly what we'd build for your clinic, and give you a clear picture of what you can expect within 30 days.</p>
     <div class="btn-row reveal reveal-delay-3">
-      <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</a>
+      <a class="btn-primary" href="/book-demo" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</a>
     </div>
     <p class="final-cta-note reveal reveal-delay-4">No commitment required · 30-minute call · Results within 30 days guaranteed</p>
   </div>
@@ -1382,7 +1382,7 @@ section { width: 100%; }
     <div class="footer-grid">
       <div class="footer-brand">
         <img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="62" height="62">
-        <p>The AI receptionist built for aesthetic clinics, med spas, and cosmetic practices across global markets. Never miss a booking again.</p>
+        <p>The AI receptionist built for aesthetic, dental, wellness, and private healthcare clinics across global markets. Never miss a booking again.</p>
       </div>
       <div>
         <div class="footer-col-title">Services</div>
@@ -2027,7 +2027,7 @@ a { color: inherit; text-decoration: none; }
     <a class="nav-link" href="/#pricing">Pricing</a>
     <a class="nav-link active" href="/about">About</a>
     <a class="nav-link" href="/#faq">FAQ</a>
-    <a class="nav-cta" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Call ↗</a>
+    <a class="nav-cta" href="/book-demo">Book a Call ↗</a>
   </div>
 </nav>
 
@@ -2040,7 +2040,7 @@ a { color: inherit; text-decoration: none; }
       <h1 class="reveal reveal-delay-1">Built by an AI engineer.<br><em>Not a marketer.</em></h1>
       <p class="about-hero-sub reveal reveal-delay-2">Most AI tools for clinics are built by people who discovered AI last year. ClinovaAI was built by someone who's been building AI systems since 2015 - a decade before it became a trend - and has deployed them at some of the world's most demanding technology companies.</p>
       <div class="btn-row reveal reveal-delay-3">
-        <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Discovery Call ↗</a>
+        <a class="btn-primary" href="/book-demo">Book a Discovery Call ↗</a>
         <a class="btn-outline" href="/">See Our Services</a>
       </div>
     </div>
@@ -2231,7 +2231,7 @@ a { color: inherit; text-decoration: none; }
     <h2 class="reveal reveal-delay-1">Ready to stop<br><em>losing bookings?</em></h2>
     <p class="reveal reveal-delay-2">Book a 30-minute discovery call. We'll review your current missed call volume, show you exactly what we'd build for your clinic, and give you a clear picture of what to expect within 30 days.</p>
     <div class="btn-row reveal reveal-delay-3">
-      <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</a>
+      <a class="btn-primary" href="/book-demo" style="font-size:13px; padding:18px 40px;">Book a Discovery Call ↗</a>
       <a class="btn-outline" href="/">View Our Services</a>
     </div>
     <p class="reveal reveal-delay-4" style="margin-top:28px; font-size:12px; color:var(--cream-dim); opacity:0.4; letter-spacing:0.04em;">No commitment required · 30 minutes · 30-day results guaranteed</p>
@@ -2794,7 +2794,7 @@ export const brandKitPage = {
   <section class="hero" id="hero">
     <div class="hero-eyebrow">ClinovaAI - Brand Identity System</div>
     <h1 class="hero-title">Where <em>luxury</em> meets intelligence.</h1>
-    <p class="hero-sub">A complete brand kit for the AI receptionist built for aesthetic clinics, med spas, and cosmetic practices across global markets.</p>
+    <p class="hero-sub">A complete brand kit for the AI receptionist built for aesthetic, dental, wellness, and private healthcare clinics across global markets.</p>
     <div class="hero-tagline">"Never Miss a Booking Again"</div>
     <div class="hero-meta">
       <span>clinovaai.co</span>
@@ -3235,7 +3235,7 @@ export const brandKitPage = {
         <a class="nav-link-demo" href="#">Pricing</a>
         <a class="nav-link-demo" href="#">About</a>
       </div>
-      <a class="btn-primary" style="font-size:11px; padding:10px 20px;" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Call</a>
+      <a class="btn-primary" style="font-size:11px; padding:10px 20px;" href="/book-demo">Book a Call</a>
     </div>
     <p class="note">Navigation: 64px height · blur backdrop · 1px bottom rule · no heavy borders</p>
     <hr class="fancy">
@@ -3247,7 +3247,7 @@ export const brandKitPage = {
       <h2 class="hero-strip-title">Your clinic,<br><em>on autopilot.</em></h2>
       <p class="hero-strip-body">ClinovaAI installs a done-for-you AI receptionist that responds, books, and follows up - 24 hours a day, 7 days a week.</p>
       <div style="display:flex; gap:16px; flex-wrap:wrap;">
-        <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a>
+        <a class="btn-primary" href="/book-demo">Book a Discovery Call</a>
         <button class="btn-secondary">See How It Works</button>
       </div>
     </div>
@@ -3257,7 +3257,7 @@ export const brandKitPage = {
     <div style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--teal); margin-bottom:16px;">Buttons</div>
     <div class="rule-card" style="margin-bottom:2px;">
       <div class="btn-row">
-        <a class="btn-primary" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Book a Call ↗</a>
+        <a class="btn-primary" href="/book-demo">Book a Call ↗</a>
         <button class="btn-secondary">Learn More</button>
         <button class="btn-ghost">View Results →</button>
       </div>
@@ -3306,7 +3306,7 @@ export const brandKitPage = {
         <input class="input-demo" type="text" placeholder="e.g. Lumina Aesthetics">
         <label class="input-label">Email Address</label>
         <input class="input-demo" type="email" placeholder="hello@youraesthetics.co.uk">
-        <a class="btn-primary" style="width:100%; justify-content:center; margin-top:8px;" href="https://calendly.com/clinova/lost-revenue-audit" target="_blank" rel="noopener noreferrer">Get Started</a>
+        <a class="btn-primary" style="width:100%; justify-content:center; margin-top:8px;" href="/book-demo">Get Started</a>
       </div>
     </div>
   </section>
@@ -3593,7 +3593,7 @@ export const brandKitPage = {
         <div class="deck-slide-inner ds-title">
           <div class="ds-eyebrow">ClinovaAI · Clinic Automation</div>
           <div class="ds-h" style="font-family:var(--serif); font-size:clamp(18px,3vw,30px);">Never Miss a<br><em>Booking Again.</em></div>
-          <div class="ds-sub" style="margin-top:10px;">The AI receptionist built for<br>aesthetic clinics &amp; med spas.</div>
+          <div class="ds-sub" style="margin-top:10px;">The AI receptionist built for<br>clinics with high-value appointments.</div>
           <div class="ds-accent-line"></div>
         </div>
       </div>

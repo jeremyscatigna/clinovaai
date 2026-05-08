@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/design-system"],
+        disallow: ["/design-system", "/thank-you"],
       },
     ],
     sitemap: "https://clinovaai.co/sitemap.xml",

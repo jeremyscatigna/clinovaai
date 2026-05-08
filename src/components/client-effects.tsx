@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { trackEvent } from "@/lib/analytics";
 
 export function ClientEffects() {
   const pathname = usePathname();
@@ -50,6 +51,16 @@ export function ClientEffects() {
       if (!(target instanceof Element)) return;
 
       const trigger = target.closest<HTMLElement>("[data-scroll-target]");
+      const trackingTrigger = target.closest<HTMLElement>("[data-track-event]");
+
+      if (trackingTrigger) {
+        trackEvent(trackingTrigger.dataset.trackEvent ?? "Lead", {
+          customData: {
+            content_name: trackingTrigger.dataset.trackContent ?? trackingTrigger.textContent?.trim() ?? "tracked_click",
+          },
+        });
+      }
+
       if (!trigger) return;
 
       const scrollTarget = document.getElementById(trigger.dataset.scrollTarget ?? "");

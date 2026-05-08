@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
-import { RawPage } from "@/components/raw-page";
-import { landingPage } from "@/generated/pages";
+import { HomePage } from "@/components/marketing/home-page";
 
 export const metadata: Metadata = {
-  title: "The AI Receptionist Built for Aesthetic Clinics",
+  title: "Done-For-You AI Growth Systems for Clinics",
   description:
-    "ClinovaAI installs done-for-you AI receptionist systems into aesthetic clinics and med spas. Stop losing bookings to missed calls.",
+    "ClinovaAI builds and manages AI systems for clinic front desk, follow-up, reviews, reactivation, social conversations, ads support, and retention.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "ClinovaAI | The AI Receptionist Built for Aesthetic Clinics",
+    title: "ClinovaAI | Done-For-You AI Growth Systems for Clinics",
     description:
-      "Stop losing bookings to missed calls. ClinovaAI builds, installs, and manages AI receptionist systems for aesthetic clinics.",
+      "Stop losing clinic revenue to missed enquiries, slow follow-up, dormant clients, weak reviews, and no-shows.",
     url: "/",
   },
 };
@@ -23,16 +22,16 @@ const serviceSchema = {
   name: "ClinovaAI",
   url: "https://clinovaai.co",
   areaServed: "Worldwide",
-  serviceType: "AI receptionist systems for aesthetic clinics",
+  serviceType: "Done-for-you AI growth systems for clinics",
   description:
-    "Done-for-you AI receptionist systems for aesthetic clinics, med spas, and cosmetic practices.",
+    "Done-for-you AI systems for clinic front desk, follow-up, reviews, reactivation, social conversations, ads support, and retention.",
 };
 
 export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <RawPage css={landingPage.css} body={landingPage.body} />
+      <HomePage />
     </>
   );
 }

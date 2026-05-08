@@ -459,7 +459,7 @@ const pricingTierCss = `
 
 const navLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="58" height="58">';
 const footerLogo = '<img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="62" height="62">';
-const bookingUrl = "https://calendly.com/clinova/lost-revenue-audit";
+const bookingUrl = "/book-demo";
 
 const removeLongDashes = (value) => value.replace(/[\u2013\u2014]/g, "-");
 
@@ -479,6 +479,11 @@ const globalizeCurrencyAndMarkets = (value) => {
     .replaceAll(`average ${legacyUk} aesthetic clinic`, "average aesthetic clinic")
     .replaceAll(`Average ${legacyUk} aesthetic clinic`, "Average aesthetic clinic")
     .replaceAll("Trusted by Aesthetic Clinics Across Global Markets", "Trusted by Aesthetic Clinics Globally")
+    .replaceAll("aesthetic clinics, med spas, and cosmetic practices", "aesthetic, dental, wellness, and private healthcare clinics")
+    .replaceAll("aesthetic clinics &amp; med spas", "clinics with high-value appointments")
+    .replaceAll("aesthetic clinics and med spas", "clinics with high-value appointments")
+    .replaceAll("med spas", "clinics")
+    .replaceAll("med spa", "clinic")
     .replaceAll(`${legacyClinicStreet} Street clinic and a ${legacyBoutiqueArea} boutique`, "premium clinic and a luxury boutique")
     .replaceAll(legacyUnitedKingdom, "global markets")
     .replaceAll(legacyCity, "leading global markets")
@@ -494,7 +499,7 @@ const replaceLiveLogos = (body) =>
 const linkBookingCtas = (body) =>
   body.replace(
     /<button([^>]*) data-scroll-target="(?:final-cta|about-cta)"([^>]*)>([\s\S]*?)<\/button>/g,
-    `<a$1 href="${bookingUrl}" target="_blank" rel="noopener noreferrer"$2>$3</a>`,
+    `<a$1 href="${bookingUrl}"$2>$3</a>`,
   );
 
 const replaceGuaranteeBadge = (body) =>
@@ -530,7 +535,7 @@ const pricingSection = `<!-- ══ PRICING ══ -->
           <li>Basic reporting</li>
         </ul>
         <p class="pricing-card-note">This stops you losing easy revenue from missed calls.</p>
-        <a class="pricing-cta" href="${bookingUrl}" target="_blank" rel="noopener noreferrer">Get Started</a>
+        <a class="pricing-cta" href="${bookingUrl}">Get Started</a>
       </div>
 
       <div class="pricing-card featured reveal reveal-delay-1">
@@ -552,7 +557,7 @@ const pricingSection = `<!-- ══ PRICING ══ -->
           <li>Booking optimisation<span class="pricing-feature-note">Reduces drop-offs and increases the percentage of enquiries that turn into appointments.</span></li>
         </ul>
         <p class="pricing-card-note">This is where your system shifts from recovering missed opportunities to consistently generating new bookings on autopilot.</p>
-        <a class="pricing-cta featured-cta" href="${bookingUrl}" target="_blank" rel="noopener noreferrer">Get Started</a>
+        <a class="pricing-cta featured-cta" href="${bookingUrl}">Get Started</a>
       </div>
 
       <div class="pricing-card reveal reveal-delay-2">
@@ -575,7 +580,7 @@ const pricingSection = `<!-- ══ PRICING ══ -->
           <li>Priority support and ongoing optimisation<span class="pricing-feature-note">Faster response times and continuous improvements to increase performance.</span></li>
         </ul>
         <p class="pricing-card-note">This is how you dominate your local market and automate your entire front-end, so no lead is missed and bookings run consistently without extra manual effort.</p>
-        <a class="pricing-cta" href="${bookingUrl}" target="_blank" rel="noopener noreferrer">Get Started</a>
+        <a class="pricing-cta" href="${bookingUrl}">Get Started</a>
       </div>
 
     </div>
@@ -639,7 +644,7 @@ const patchBrandKit = (body) =>
   body
     .replace('<div class="layout">', '<div class="layout design-system-layout">')
     .replace("The <em>clients you're losing</em> aren't going elsewhere. They're just going unanswered.", "The <em>clients you're losing</em> need treatment now. If you don't answer, your competitor will.")
-    .replace(/<button([^>]*)>(Book a (?:Call|Discovery Call)(?: ↗)?|Get Started)<\/button>/g, `<a$1 href="${bookingUrl}" target="_blank" rel="noopener noreferrer">$2</a>`);
+    .replace(/<button([^>]*)>(Book a (?:Call|Discovery Call)(?: ↗)?|Get Started)<\/button>/g, `<a$1 href="${bookingUrl}">$2</a>`);
 
 mkdirSync(generatedRoot, { recursive: true });
 mkdirSync(join(projectRoot, "public", "uploads"), { recursive: true });

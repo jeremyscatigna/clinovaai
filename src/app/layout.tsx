@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ClientEffects } from "@/components/client-effects";
+import { MetaPixel } from "@/components/meta-pixel";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -19,11 +20,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://clinovaai.co"),
   applicationName: "ClinovaAI",
   title: {
-    default: "ClinovaAI | The AI Receptionist Built for Aesthetic Clinics",
+    default: "ClinovaAI | Done-For-You AI Growth Systems for Clinics",
     template: "%s | ClinovaAI",
   },
   description:
-    "ClinovaAI installs done-for-you AI receptionist systems into aesthetic clinics and med spas across growth-focused markets.",
+    "ClinovaAI builds and manages AI systems for clinic front desk, follow-up, reviews, reactivation, social conversations, ads support, and retention.",
   alternates: {
     canonical: "/",
   },
@@ -40,15 +41,15 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://clinovaai.co",
     siteName: "ClinovaAI",
-    title: "ClinovaAI | Never Miss a Booking Again",
+    title: "ClinovaAI | Done-For-You AI Growth Systems for Clinics",
     description:
-      "Done-for-you AI receptionist systems for aesthetic clinics, med spas, and cosmetic practices.",
+      "Fully managed AI growth systems for clinics. Built in Miami and London.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ClinovaAI | Never Miss a Booking Again",
+    title: "ClinovaAI | Done-For-You AI Growth Systems for Clinics",
     description:
-      "Done-for-you AI receptionist systems for aesthetic clinics, med spas, and cosmetic practices.",
+      "Fully managed AI growth systems for clinics. Built in Miami and London.",
   },
   robots: {
     index: true,
@@ -72,6 +73,7 @@ export default function RootLayout({
       <body>
         {children}
         <ClientEffects />
+        <MetaPixel />
       </body>
     </html>
   );

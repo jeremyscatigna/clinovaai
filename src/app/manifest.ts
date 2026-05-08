@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "ClinovaAI",
     short_name: "ClinovaAI",
-    description: "The AI receptionist built for aesthetic clinics.",
+    description: "Done-for-you AI growth systems for clinics.",
     start_url: "/",
     display: "standalone",
     background_color: "#080C0B",
