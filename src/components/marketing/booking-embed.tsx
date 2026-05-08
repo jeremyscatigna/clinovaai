@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { getAttributionParams, trackEvent } from "@/lib/analytics";
+import { getAttributionParams } from "@/lib/analytics";
 import { ghlBookingUrl } from "@/lib/site";
 
 export function BookingEmbed() {
@@ -10,10 +10,6 @@ export function BookingEmbed() {
   useEffect(() => {
     window.requestAnimationFrame(() => {
       setAttribution(getAttributionParams().toString());
-    });
-    trackEvent("ViewContent", {
-      customData: { content_name: "GoHighLevel booking embed" },
-      sendServer: false,
     });
   }, []);
 
@@ -25,17 +21,7 @@ export function BookingEmbed() {
 
   return (
     <div className="reveal reveal-delay-1">
-      <iframe
-        className="booking-frame"
-        src={src}
-        title="Book your ClinovaAI demo"
-        loading="lazy"
-        onLoad={() =>
-          trackEvent("Lead", {
-            customData: { content_name: "GoHighLevel booking embed loaded" },
-          })
-        }
-      />
+      <iframe className="booking-frame" src={src} title="Book your ClinovaAI demo" loading="lazy" />
       <p className="ghl-fallback">
         <a
           className="footer-link"

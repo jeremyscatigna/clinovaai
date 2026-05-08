@@ -26,6 +26,7 @@ export function RevenueCalculator({ compact = false }: RevenueCalculatorProps) {
   const trackCalculatorChange = () => {
     trackEvent("CalculatorStart", {
       customData: { missed_enquiries_per_day: missed, average_treatment_value: treatmentValue },
+      custom: true,
     });
   };
 
@@ -37,6 +38,7 @@ export function RevenueCalculator({ compact = false }: RevenueCalculatorProps) {
         missed_enquiries_per_day: missed,
         average_treatment_value: treatmentValue,
       },
+      custom: true,
     });
   };
 

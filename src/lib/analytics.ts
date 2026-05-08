@@ -4,6 +4,7 @@ type TrackOptions = {
   eventId?: string;
   customData?: Record<string, unknown>;
   sendServer?: boolean;
+  custom?: boolean;
 };
 
 declare global {
@@ -26,7 +27,7 @@ export function trackEvent(eventName: string, options: TrackOptions = {}) {
   const eventId = options.eventId ?? createEventId();
   const customData = options.customData ?? {};
 
-  window.fbq?.("track", eventName, customData, { eventID: eventId });
+  window.fbq?.(options.custom ? "trackCustom" : "track", eventName, customData, { eventID: eventId });
 
   if (options.sendServer === false) return;
 

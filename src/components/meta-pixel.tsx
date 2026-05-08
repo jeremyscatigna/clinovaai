@@ -3,7 +3,7 @@
 import Script from "next/script";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect } from "react";
-import { persistAttributionFromUrl } from "@/lib/analytics";
+import { persistAttributionFromUrl, trackEvent } from "@/lib/analytics";
 
 const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "1889417841726527";
 
@@ -14,6 +14,14 @@ function MetaPixelEvents() {
   useEffect(() => {
     persistAttributionFromUrl();
     window.fbq?.("track", "PageView");
+
+    const contentRoutes = ["/", "/calculator", "/book-demo", "/founding-cohort"];
+    if (contentRoutes.includes(pathname) || pathname.startsWith("/services/")) {
+      trackEvent("ViewContent", {
+        customData: { content_name: pathname === "/" ? "home" : pathname },
+        sendServer: false,
+      });
+    }
   }, [pathname, searchParams]);
 
   return null;

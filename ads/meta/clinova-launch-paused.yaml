@@ -1,0 +1,47 @@
+campaign:
+  name: "ClinovaAI - Clinic Growth System - Launch"
+  objective: "OUTCOME_LEADS"
+  status: "PAUSED"
+  special_ad_categories: []
+
+ad_set:
+  name: "Clinics - Revenue Leakage Calculator - US + UK"
+  daily_budget: 5000
+  optimization_goal: "LEAD_GENERATION"
+  billing_event: "IMPRESSIONS"
+  bid_strategy: "LOWEST_COST_WITHOUT_CAP"
+  targeting:
+    countries:
+      - "US"
+      - "GB"
+    age_min: 25
+    age_max: 64
+    genders:
+      - 0
+    platforms:
+      - "facebook"
+      - "instagram"
+    facebook_positions:
+      - "feed"
+    instagram_positions:
+      - "stream"
+      - "story"
+      - "reels"
+
+ads:
+  - name: "Revenue Leakage Calculator"
+    image: "../../public/brand/clinova-logo-mark.png"
+    primary_text: "Your clinic could be losing revenue through missed calls, slow follow-up, ignored messages, and dormant clients. Calculate the leakage, then see how ClinovaAI fixes it for you."
+    headline: "See What Your Clinic Is Losing"
+    description: "Done-for-you AI growth systems for clinics."
+    link: "https://clinovaai.co/calculator?utm_source=meta&utm_medium=paid_social&utm_campaign=clinic_growth_launch&utm_content=revenue_leakage_calculator"
+    cta: "LEARN_MORE"
+
+  - name: "Book 15-Min Demo"
+    image: "../../public/brand/clinova-logo-mark.png"
+    primary_text: "ClinovaAI builds and manages AI systems for your clinic's front desk, follow-up, reviews, reactivation, social conversations, ads support, and retention. No software to run. No extra staff to hire."
+    headline: "Book Your 15-Min Demo"
+    description: "Built in Miami and London. Serving clinics globally."
+    link: "https://clinovaai.co/book-demo?utm_source=meta&utm_medium=paid_social&utm_campaign=clinic_growth_launch&utm_content=book_demo"
+    cta: "BOOK_NOW"
+
