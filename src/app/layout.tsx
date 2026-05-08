@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | ClinovaAI",
   },
   description:
-    "ClinovaAI installs done-for-you AI receptionist systems into aesthetic clinics and med spas across the UK.",
+    "ClinovaAI installs done-for-you AI receptionist systems into aesthetic clinics and med spas across growth-focused markets.",
   alternates: {
     canonical: "/",
   },
@@ -38,7 +38,6 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
-    locale: "en_GB",
     url: "https://clinovaai.co",
     siteName: "ClinovaAI",
     title: "ClinovaAI | Never Miss a Booking Again",
@@ -69,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-GB" className={`${dmSans.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${playfair.variable}`}>
       <body>
         {children}
         <ClientEffects />

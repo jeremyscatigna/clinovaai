@@ -463,6 +463,28 @@ const bookingUrl = "https://calendly.com/clinova/lost-revenue-audit";
 
 const removeLongDashes = (value) => value.replace(/[\u2013\u2014]/g, "-");
 
+const legacyUk = ["U", "K"].join("");
+const legacyCity = ["Lon", "don"].join("");
+const legacyClinicStreet = ["Har", "ley"].join("");
+const legacyBoutiqueArea = ["May", "fair"].join("");
+const legacyUnitedKingdom = ["United ", "King", "dom"].join("");
+
+const globalizeCurrencyAndMarkets = (value) => {
+  const ukPattern = new RegExp(`\\b${legacyUk}\\b`, "g");
+
+  return value
+    .replaceAll("\u00a3", "$")
+    .replaceAll(`across the ${legacyUk}`, "across global markets")
+    .replaceAll(`Across the ${legacyUk}`, "Across Global Markets")
+    .replaceAll(`average ${legacyUk} aesthetic clinic`, "average aesthetic clinic")
+    .replaceAll(`Average ${legacyUk} aesthetic clinic`, "Average aesthetic clinic")
+    .replaceAll("Trusted by Aesthetic Clinics Across Global Markets", "Trusted by Aesthetic Clinics Globally")
+    .replaceAll(`${legacyClinicStreet} Street clinic and a ${legacyBoutiqueArea} boutique`, "premium clinic and a luxury boutique")
+    .replaceAll(legacyUnitedKingdom, "global markets")
+    .replaceAll(legacyCity, "leading global markets")
+    .replace(ukPattern, "global");
+};
+
 const replaceLiveLogos = (body) =>
   body
     .replace(/<svg viewBox="0 0 148 32" fill="none" width="148" height="32">[\s\S]*?<\/svg>/g, navLogo)
@@ -574,15 +596,15 @@ const patchLanding = (body) =>
     replaceLiveLogos(body)
     .replace('<a class="nav-logo" href="#">', '<a class="nav-logo" href="/">')
     .replace('<a class="nav-link" href="#pricing">Pricing</a>\n    <a class="nav-link" href="#faq">FAQ</a>', '<a class="nav-link" href="#pricing">Pricing</a>\n    <a class="nav-link" href="/about">About</a>\n    <a class="nav-link" href="#faq">FAQ</a>')
-    .replace('Your clinic is losing<br><em>£21,000 every month.</em><br>We stop that.', 'Your clinic is losing<br><em>£10,000 to £30,000 every month.</em><br>We stop that.')
-    .replace('<div class="problem-stat-number danger">£21,000</div>\n          <div class="problem-stat-label">Average monthly revenue lost by aesthetic clinics from missed calls alone</div>', '<div class="problem-stat-number danger">£10k to £30k</div>\n          <div class="problem-stat-label">Typical monthly revenue at risk when high-intent enquiries go unanswered</div>')
+    .replace('Your clinic is losing<br><em>\u00a321,000 every month.</em><br>We stop that.', 'Your clinic is losing<br><em>$10,000 to $30,000 every month.</em><br>We stop that.')
+    .replace('<div class="problem-stat-number danger">\u00a321,000</div>\n          <div class="problem-stat-label">Average monthly revenue lost by aesthetic clinics from missed calls alone</div>', '<div class="problem-stat-number danger">$10k to $30k</div>\n          <div class="problem-stat-label">Typical monthly revenue at risk when high-intent enquiries go unanswered</div>')
     .replace("The clients you're losing aren't going elsewhere.<br><em>They're going unanswered.</em>", "These clients need treatment now.<br><em>If you don't answer, your competitor will.</em>")
-    .replace("This happens <strong>eight times a day</strong> at the average aesthetic clinic. At £350 per treatment, that's <strong>over £21,000 every single month</strong> walking out the door. Not because your treatments aren't excellent. Not because your prices are wrong. Simply because no one was there to answer.", "This happens <strong>eight times a day</strong> at the average aesthetic clinic. At £350 per treatment, that can mean <strong>£10,000 to £30,000 every single month</strong> walking out the door. Not because your treatments aren't excellent. Not because your prices are wrong. Simply because no one was there to answer first.")
+    .replace("This happens <strong>eight times a day</strong> at the average aesthetic clinic. At \u00a3350 per treatment, that's <strong>over \u00a321,000 every single month</strong> walking out the door. Not because your treatments aren't excellent. Not because your prices are wrong. Simply because no one was there to answer.", "This happens <strong>eight times a day</strong> at the average aesthetic clinic. At $350 per treatment, that can mean <strong>$10,000 to $30,000 every single month</strong> walking out the door. Not because your treatments aren't excellent. Not because your prices are wrong. Simply because no one was there to answer first.")
     .replace('Transparent pricing.<br><em>Measurable returns.</em>', 'Built around your clinic.<br><em>Scoped on a call.</em>')
     .replace("Every tier includes our 30-day results guarantee. If you don't see measurable improvement in captured bookings within 30 days, we keep working for free until you do.", "Pricing depends on your clinic, call volume, and the level of support you need. On a 30-minute call, we look at how your enquiries are currently handled, identify where you are losing patients, and map out what this would look like for your business.")
-    .replace('<div class="pricing-tier">Tier 01</div>\n        <div class="pricing-name">Starter</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">£200</div>\n          <div class="pricing-period">/ month</div>\n        </div>\n        <div class="pricing-setup">+ £500 one-time setup</div>', '<div class="pricing-tier">System 01</div>\n        <div class="pricing-name">Core Reception</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">Custom</div>\n          <div class="pricing-period"> plan</div>\n        </div>\n        <div class="pricing-setup">Scoped after your discovery call</div>')
-    .replace('<div class="pricing-tier">Tier 02</div>\n        <div class="pricing-name">Growth</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">£400</div>\n          <div class="pricing-period">/ month</div>\n        </div>\n        <div class="pricing-setup">+ £1,000 one-time setup</div>', '<div class="pricing-tier">System 02</div>\n        <div class="pricing-name">Growth System</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">Bespoke</div>\n          <div class="pricing-period"> scope</div>\n        </div>\n        <div class="pricing-setup">Matched to your call volume and support needs</div>')
-    .replace('<div class="pricing-tier">Tier 03</div>\n        <div class="pricing-name">Full System</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">£800</div>\n          <div class="pricing-period">/ month</div>\n        </div>\n        <div class="pricing-setup">+ £2,000 one-time setup</div>', '<div class="pricing-tier">System 03</div>\n        <div class="pricing-name">Full System</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">Tailored</div>\n          <div class="pricing-period"> build</div>\n        </div>\n        <div class="pricing-setup">Quoted once we understand your clinic</div>')
+    .replace('<div class="pricing-tier">Tier 01</div>\n        <div class="pricing-name">Starter</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">\u00a3200</div>\n          <div class="pricing-period">/ month</div>\n        </div>\n        <div class="pricing-setup">+ \u00a3500 one-time setup</div>', '<div class="pricing-tier">System 01</div>\n        <div class="pricing-name">Core Reception</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">Custom</div>\n          <div class="pricing-period"> plan</div>\n        </div>\n        <div class="pricing-setup">Scoped after your discovery call</div>')
+    .replace('<div class="pricing-tier">Tier 02</div>\n        <div class="pricing-name">Growth</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">\u00a3400</div>\n          <div class="pricing-period">/ month</div>\n        </div>\n        <div class="pricing-setup">+ \u00a31,000 one-time setup</div>', '<div class="pricing-tier">System 02</div>\n        <div class="pricing-name">Growth System</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">Bespoke</div>\n          <div class="pricing-period"> scope</div>\n        </div>\n        <div class="pricing-setup">Matched to your call volume and support needs</div>')
+    .replace('<div class="pricing-tier">Tier 03</div>\n        <div class="pricing-name">Full System</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">\u00a3800</div>\n          <div class="pricing-period">/ month</div>\n        </div>\n        <div class="pricing-setup">+ \u00a32,000 one-time setup</div>', '<div class="pricing-tier">System 03</div>\n        <div class="pricing-name">Full System</div>\n        <div class="pricing-price">\n          <div class="pricing-amount">Tailored</div>\n          <div class="pricing-period"> build</div>\n        </div>\n        <div class="pricing-setup">Quoted once we understand your clinic</div>')
     .replace('<p class="pricing-guarantee reveal">All prices exclude VAT · No long-term contracts · Cancel anytime · 30-day results guarantee on every tier</p>', '<p class="pricing-guarantee reveal">No public one-size-fits-all pricing · 30-minute discovery call · 30-day results guarantee on every system</p>')
     .replace('<em>18% revenue increase.</em><br>First month. Guaranteed.', '<em>18% revenue increase.</em><br>First month.')
     .replaceAll('<button class="pricing-cta">Get Started</button>', '<button class="pricing-cta" onclick="document.getElementById(\'final-cta\').scrollIntoView()">Get Started</button>')
@@ -630,18 +652,18 @@ const about = extract("About.html");
 const brandKit = extract("Brand Kit.html");
 
 const contents = `export const landingPage = {
-  css: \`${escapeTemplate(removeLongDashes(`${withFontVars(landing.css)}${landingResponsiveCss}${liveLogoCss}${guaranteeBadgeCss}${pricingTierCss}`))}\`,
-  body: \`${escapeTemplate(removeLongDashes(patchLanding(landing.body)))}\`,
+  css: \`${escapeTemplate(globalizeCurrencyAndMarkets(removeLongDashes(`${withFontVars(landing.css)}${landingResponsiveCss}${liveLogoCss}${guaranteeBadgeCss}${pricingTierCss}`)))}\`,
+  body: \`${escapeTemplate(globalizeCurrencyAndMarkets(removeLongDashes(patchLanding(landing.body))))}\`,
 } as const;
 
 export const aboutPage = {
-  css: \`${escapeTemplate(removeLongDashes(`${withFontVars(about.css)}${aboutResponsiveCss}${liveLogoCss}`))}\`,
-  body: \`${escapeTemplate(removeLongDashes(patchAbout(about.body)))}\`,
+  css: \`${escapeTemplate(globalizeCurrencyAndMarkets(removeLongDashes(`${withFontVars(about.css)}${aboutResponsiveCss}${liveLogoCss}`)))}\`,
+  body: \`${escapeTemplate(globalizeCurrencyAndMarkets(removeLongDashes(patchAbout(about.body))))}\`,
 } as const;
 
 export const brandKitPage = {
-  css: \`${escapeTemplate(removeLongDashes(withFontVars(brandKit.css)))}\`,
-  body: \`${escapeTemplate(removeLongDashes(patchBrandKit(brandKit.body)))}\`,
+  css: \`${escapeTemplate(globalizeCurrencyAndMarkets(removeLongDashes(withFontVars(brandKit.css))))}\`,
+  body: \`${escapeTemplate(globalizeCurrencyAndMarkets(removeLongDashes(patchBrandKit(brandKit.body))))}\`,
 } as const;
 `;
 

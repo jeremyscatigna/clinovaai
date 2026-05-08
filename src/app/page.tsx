@@ -5,7 +5,7 @@ import { landingPage } from "@/generated/pages";
 export const metadata: Metadata = {
   title: "The AI Receptionist Built for Aesthetic Clinics",
   description:
-    "ClinovaAI installs done-for-you AI receptionist systems into aesthetic clinics and med spas across the UK. Stop losing bookings to missed calls.",
+    "ClinovaAI installs done-for-you AI receptionist systems into aesthetic clinics and med spas. Stop losing bookings to missed calls.",
   alternates: {
     canonical: "/",
   },
@@ -22,7 +22,7 @@ const serviceSchema = {
   "@type": "ProfessionalService",
   name: "ClinovaAI",
   url: "https://clinovaai.co",
-  areaServed: "GB",
+  areaServed: "Worldwide",
   serviceType: "AI receptionist systems for aesthetic clinics",
   description:
     "Done-for-you AI receptionist systems for aesthetic clinics, med spas, and cosmetic practices.",

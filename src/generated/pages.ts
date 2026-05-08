@@ -991,7 +991,7 @@ section { width: 100%; }
   <div class="hero-inner">
     <div class="eyebrow reveal">AI Receptionist for Aesthetic Clinics</div>
     <h1 class="hero-title reveal reveal-delay-1">
-      Your clinic is losing<br><em>£10,000 to £30,000 every month.</em><br>We stop that.
+      Your clinic is losing<br><em>$10,000 to $30,000 every month.</em><br>We stop that.
     </h1>
     <p class="hero-sub reveal reveal-delay-2">
       ClinovaAI installs a done-for-you AI receptionist into your clinic - answering every missed call, booking every appointment, 24 hours a day, 7 days a week. You do nothing differently. Except watch your calendar fill.
@@ -1010,7 +1010,7 @@ section { width: 100%; }
         <div class="hero-proof-label">more bookings when<br>responding within 5 mins</div>
       </div>
       <div class="hero-proof-item">
-        <div class="hero-proof-num"><span>£350</span></div>
+        <div class="hero-proof-num"><span>$350</span></div>
         <div class="hero-proof-label">average treatment value<br>lost per missed call</div>
       </div>
       <div class="hero-proof-item">
@@ -1030,7 +1030,7 @@ section { width: 100%; }
     <span class="ticker-item"><span class="ticker-dot"></span>Client Re-engagement Sequences</span>
     <span class="ticker-item"><span class="ticker-dot"></span>30-Day Results Guarantee</span>
     <span class="ticker-item"><span class="ticker-dot"></span>Done For You · We Build, Install, Manage</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>Trusted by Aesthetic Clinics Across the UK</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Trusted by Aesthetic Clinics Globally</span>
     <!-- Duplicate for seamless loop -->
     <span class="ticker-item"><span class="ticker-dot"></span>AI Receptionist · 24/7 Call Answering</span>
     <span class="ticker-item"><span class="ticker-dot"></span>Automated Booking · Zero Staff Required</span>
@@ -1038,7 +1038,7 @@ section { width: 100%; }
     <span class="ticker-item"><span class="ticker-dot"></span>Client Re-engagement Sequences</span>
     <span class="ticker-item"><span class="ticker-dot"></span>30-Day Results Guarantee</span>
     <span class="ticker-item"><span class="ticker-dot"></span>Done For You · We Build, Install, Manage</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>Trusted by Aesthetic Clinics Across the UK</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Trusted by Aesthetic Clinics Globally</span>
   </div>
 </div>
 
@@ -1048,12 +1048,12 @@ section { width: 100%; }
     <div class="problem-grid">
       <div class="problem-stats">
         <div class="problem-stat-card reveal">
-          <div class="problem-stat-number danger">£10k to £30k</div>
+          <div class="problem-stat-number danger">$10k to $30k</div>
           <div class="problem-stat-label">Typical monthly revenue at risk when high-intent enquiries go unanswered</div>
         </div>
         <div class="problem-stat-card reveal reveal-delay-1">
           <div class="problem-stat-number danger">8+</div>
-          <div class="problem-stat-label">Missed calls per day at the average UK aesthetic clinic</div>
+          <div class="problem-stat-label">Missed calls per day at the average aesthetic clinic</div>
         </div>
         <div class="problem-stat-card reveal reveal-delay-2">
           <div class="problem-stat-number danger">85%</div>
@@ -1063,8 +1063,8 @@ section { width: 100%; }
       <div class="problem-copy">
         <div class="eyebrow reveal">The Problem</div>
         <h2 class="reveal reveal-delay-1">These clients need treatment now.<br><em>If you don't answer, your competitor will.</em></h2>
-        <p class="reveal reveal-delay-2">You're mid-treatment. Your team is with a client. The phone rings, no one answers, and that caller - who was ready to book a £350 treatment - simply moves on. They don't leave a voicemail. They don't wait. They book the clinic down the road.</p>
-        <p class="reveal reveal-delay-3">This happens <strong>eight times a day</strong> at the average aesthetic clinic. At £350 per treatment, that can mean <strong>£10,000 to £30,000 every single month</strong> walking out the door. Not because your treatments aren't excellent. Not because your prices are wrong. Simply because no one was there to answer first.</p>
+        <p class="reveal reveal-delay-2">You're mid-treatment. Your team is with a client. The phone rings, no one answers, and that caller - who was ready to book a $350 treatment - simply moves on. They don't leave a voicemail. They don't wait. They book the clinic down the road.</p>
+        <p class="reveal reveal-delay-3">This happens <strong>eight times a day</strong> at the average aesthetic clinic. At $350 per treatment, that can mean <strong>$10,000 to $30,000 every single month</strong> walking out the door. Not because your treatments aren't excellent. Not because your prices are wrong. Simply because no one was there to answer first.</p>
         <p class="reveal reveal-delay-4">Studies confirm that clinics responding within five minutes convert <strong>eight times more bookings</strong> than those responding within an hour. Your reputation is built in the treatment room. Your revenue is decided before clients ever walk through the door.</p>
       </div>
     </div>
@@ -1276,7 +1276,7 @@ section { width: 100%; }
             <div class="case-stat-label">Days to measurable results</div>
           </div>
           <div class="case-stat">
-            <div class="case-stat-num">£0</div>
+            <div class="case-stat-num">$0</div>
             <div class="case-stat-label">Additional marketing spend required</div>
           </div>
         </div>
@@ -1382,7 +1382,7 @@ section { width: 100%; }
     <div class="footer-grid">
       <div class="footer-brand">
         <img class="brand-logo-mark" src="/brand/clinova-logo-mark.png" alt="ClinovaAI" width="62" height="62">
-        <p>The AI receptionist built for aesthetic clinics, med spas, and cosmetic practices across the UK. Never miss a booking again.</p>
+        <p>The AI receptionist built for aesthetic clinics, med spas, and cosmetic practices across global markets. Never miss a booking again.</p>
       </div>
       <div>
         <div class="footer-col-title">Services</div>
@@ -2794,7 +2794,7 @@ export const brandKitPage = {
   <section class="hero" id="hero">
     <div class="hero-eyebrow">ClinovaAI - Brand Identity System</div>
     <h1 class="hero-title">Where <em>luxury</em> meets intelligence.</h1>
-    <p class="hero-sub">A complete brand kit for the AI receptionist built for aesthetic clinics, med spas, and cosmetic practices across the UK.</p>
+    <p class="hero-sub">A complete brand kit for the AI receptionist built for aesthetic clinics, med spas, and cosmetic practices across global markets.</p>
     <div class="hero-tagline">"Never Miss a Booking Again"</div>
     <div class="hero-meta">
       <span>clinovaai.co</span>
@@ -2808,7 +2808,7 @@ export const brandKitPage = {
   <section class="section" id="colours">
     <div class="section-eyebrow">01 - Foundation</div>
     <h2 class="section-title">Colour Palette</h2>
-    <p class="section-desc">Five colours. Every shade chosen to feel simultaneously medical-grade and luxury-grade - colours that belong in a Harley Street clinic and a Mayfair boutique in equal measure.</p>
+    <p class="section-desc">Five colours. Every shade chosen to feel simultaneously medical-grade and luxury-grade - colours that belong in a premium clinic and a luxury boutique in equal measure.</p>
 
     <div class="palette-grid">
       <!-- Primary Teal -->
@@ -3273,7 +3273,7 @@ export const brandKitPage = {
         <div class="stat-change">↑ vs. 38% industry average</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">£18k</div>
+        <div class="stat-number">$18k</div>
         <div class="stat-label">Avg. recovered monthly revenue</div>
         <div class="stat-change">↑ within first 30 days</div>
       </div>
@@ -3539,7 +3539,7 @@ export const brandKitPage = {
         </div>
         <div class="social-card-content">
           <div class="sc-eyebrow">Client Story</div>
-          <div class="sc-title">£23k recovered in 30 days. Zero extra staff.</div>
+          <div class="sc-title">$23k recovered in 30 days. Zero extra staff.</div>
           <div class="sc-handle">@clinovaai</div>
         </div>
       </div>
@@ -3608,7 +3608,7 @@ export const brandKitPage = {
               <div class="ds-list-item">62% of clinic enquiries arrive outside opening hours</div>
               <div class="ds-list-item">94% of missed calls never call back</div>
               <div class="ds-list-item">Manual follow-up takes 3-5 hours per week per staff member</div>
-              <div class="ds-list-item">Average aesthetic clinic loses £4,200/month to missed leads</div>
+              <div class="ds-list-item">Average aesthetic clinic loses $4,200/month to missed leads</div>
             </div>
           </div>
           <div class="ds-number">01</div>
@@ -3647,7 +3647,7 @@ export const brandKitPage = {
         <div class="deck-slide-inner" style="background:var(--dark);">
           <div class="ds-content" style="justify-content:center; align-items:center; text-align:center;">
             <div class="ds-eyebrow" style="text-align:center;">Proven Results</div>
-            <div style="font-family:var(--serif); font-size:clamp(36px,7vw,72px); color:var(--teal); font-weight:500; line-height:1; letter-spacing:-0.03em;">£18,400</div>
+            <div style="font-family:var(--serif); font-size:clamp(36px,7vw,72px); color:var(--teal); font-weight:500; line-height:1; letter-spacing:-0.03em;">$18,400</div>
             <div style="font-family:var(--serif); font-size:clamp(10px,1.5vw,14px); color:var(--cream-dim); margin-top:6px;">Average additional monthly revenue<br>recovered by ClinovaAI clients</div>
           </div>
           <div class="ds-accent-line"></div>
@@ -3743,7 +3743,7 @@ export const brandKitPage = {
         <div class="rule-card-title">Write Like This</div>
         <ul class="rule-list">
           <li>Your AI receptionist responds in under 60 seconds. Always.</li>
-          <li>Clinics using ClinovaAI recover an average of £18,400 per month in previously lost bookings.</li>
+          <li>Clinics using ClinovaAI recover an average of $18,400 per month in previously lost bookings.</li>
           <li>We handle the enquiries. You handle the treatments.</li>
           <li>We install, configure, and manage everything. You do nothing differently.</li>
         </ul>
