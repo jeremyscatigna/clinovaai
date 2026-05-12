@@ -153,39 +153,113 @@ const extraCss = `
   font-size: 14px;
   line-height: 1.7;
 }
-.media-carousel {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(210px, 270px);
-  gap: 18px;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-  padding: 8px 0 22px;
-  margin-top: 38px;
+.creative-gallery-shell {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(42px, 6vw, 78px);
+}
+.creative-gallery-shell::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -12%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(184,147,90,0.18), transparent 64%);
+  pointer-events: none;
+}
+.creative-gallery-header {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.creative-gallery-header h2 {
+  margin: 0 0 20px;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: clamp(42px, 6.5vw, 82px);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+.creative-gallery-header p {
+  margin: 0 auto;
+  max-width: 660px;
+  color: var(--cream-dim);
+  font-size: 16px;
+  line-height: 1.78;
+}
+.media-masonry {
+  position: relative;
+  column-count: 4;
+  column-gap: 18px;
 }
 .media-card {
-  scroll-snap-align: start;
-  padding: 14px;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 18px;
+  padding: 10px;
+  break-inside: avoid;
+  background: linear-gradient(180deg, rgba(22,32,25,0.86), rgba(8,12,11,0.92));
+  border: 1px solid rgba(184,147,90,0.2);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.24);
+  transform: translateY(var(--lift, 0));
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
-.media-frame {
+.media-card:hover {
+  border-color: rgba(12,158,143,0.42);
+  box-shadow: 0 26px 70px rgba(0,0,0,0.34);
+  transform: translateY(calc(var(--lift, 0) - 4px));
+}
+.media-card:nth-child(4n + 2) { --lift: 22px; }
+.media-card:nth-child(5n + 3) { --lift: 8px; }
+.media-card:nth-child(6n + 4) { --lift: 34px; }
+.media-video-frame {
+  position: relative;
+  overflow: hidden;
   aspect-ratio: 9 / 16;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(184,147,90,0.24);
   background:
-    radial-gradient(circle at 50% 18%, rgba(184,147,90,0.35), transparent 32%),
+    radial-gradient(circle at 50% 16%, rgba(184,147,90,0.22), transparent 34%),
     linear-gradient(145deg, rgba(12,158,143,0.18), rgba(8,12,11,0.96));
-  color: var(--cream);
-  text-align: center;
-  padding: 24px;
 }
-.media-frame span {
+.media-card:nth-child(6n + 2) .media-video-frame { aspect-ratio: 9 / 14; }
+.media-card:nth-child(7n + 4) .media-video-frame { aspect-ratio: 4 / 5; }
+.media-video-frame video {
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media-card-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 4px 2px;
+}
+.media-card-caption h3 {
+  margin: 0;
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.media-card-caption span {
+  flex: 0 0 auto;
   color: var(--teal);
   font-family: var(--serif);
-  font-size: 38px;
+  font-size: 18px;
   line-height: 1;
+}
+.creative-gallery-cta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
 }
 .booking-frame {
   min-height: 760px;
@@ -269,8 +343,26 @@ const extraCss = `
   .leak-card,
   .infrastructure-card,
   .legal-card { padding: 24px 20px; }
-  .media-carousel {
-    grid-auto-columns: minmax(190px, 74vw);
+  .creative-gallery-shell { padding: 34px 18px; }
+  .creative-gallery-header { margin-bottom: 32px; }
+  .media-masonry {
+    column-count: 2;
+    column-gap: 10px;
+  }
+  .media-card {
+    margin-bottom: 10px;
+    padding: 7px;
+    --lift: 0 !important;
+  }
+  .media-card-caption {
+    padding: 10px 3px 1px;
+  }
+  .media-card-caption h3 {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+  .media-card-caption span {
+    font-size: 15px;
   }
 }
 `;

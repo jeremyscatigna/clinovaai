@@ -391,42 +391,45 @@ export function HomePage() {
 
       <section className="case-study" id="results">
         <div className="container-wide">
-          <div className="case-study-inner">
-            <div className="case-grid">
-              <div>
-                <div className="case-eyebrow reveal">Launch Creative</div>
-                <h2 className="reveal reveal-delay-1">
-                  <em>Built for the way clinics</em>
-                  <br />
-                  get attention now.
-                </h2>
-                <p className="reveal reveal-delay-2">
-                  ClinovaAI is launching with short-form creative designed for Instagram Reels, TikTok-style
-                  discovery, and Meta ad traffic. The final campaign assets will live here as a fast, mobile-first
-                  gallery.
-                </p>
-                <p className="reveal reveal-delay-3">
-                  The current cards are placeholders for the 9:16 ad concepts. Final videos should be hosted on
-                  Cloudflare R2 or Cloudflare Stream so the landing page stays fast.
-                </p>
-                <BookingCta className="btn-primary" source="creative_gallery">
-                  Book Your 15-Min Demo
-                </BookingCta>
-              </div>
-              <div className="media-carousel reveal reveal-delay-1">
+          <div className="case-study-inner creative-gallery-shell">
+            <div className="creative-gallery-header">
+              <div className="case-eyebrow reveal">Ad Creative Library</div>
+              <h2 className="reveal reveal-delay-1">
+                <em>The campaign</em>
+                <br />
+                in motion.
+              </h2>
+              <p className="reveal reveal-delay-2">
+                A mobile-first gallery of ClinovaAI launch creatives, built for Meta ads, Reels, and the way
+                clinic owners actually stop scrolling.
+              </p>
+            </div>
+
+            <div className="media-masonry reveal reveal-delay-2">
                 {adCreatives.map((creative, index) => (
-                  <div className="media-card" key={creative}>
-                    <div className="media-frame">
-                      <div>
-                        <span>{String(index + 1).padStart(2, "0")}</span>
-                        9:16 launch creative placeholder
-                      </div>
+                  <div className="media-card" key={creative.src}>
+                    <div className="media-video-frame">
+                      <video
+                        src={creative.src}
+                        controls
+                        muted
+                        playsInline
+                        preload="none"
+                        aria-label={`ClinovaAI ad creative: ${creative.title}`}
+                      />
                     </div>
-                    <h3>{["Missed calls", "DM booking", "Reviews", "Reactivation", "No-shows", "Growth system"][index]}</h3>
-                    <p>{creative}</p>
+                    <div className="media-card-caption">
+                      <h3>{creative.title}</h3>
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                    </div>
                   </div>
                 ))}
-              </div>
+            </div>
+
+            <div className="creative-gallery-cta reveal reveal-delay-3">
+              <BookingCta className="btn-primary" source="creative_gallery">
+                Book Your 15-Min Demo
+              </BookingCta>
             </div>
           </div>
         </div>

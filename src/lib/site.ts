@@ -112,12 +112,24 @@ export type ServicePage = (typeof servicePages)[number];
 export const serviceBySlug: Map<string, ServicePage> = new Map(servicePages.map((service) => [service.slug, service]));
 
 export const adCreatives = [
-  "hf_20260507_070920_52ae316b-31d0-4299-a729-4c1dd92c6a6a.mp4",
-  "hf_20260507_082310_ce870867-e66d-417e-b1a9-a8d1552090b9.mp4",
-  "hf_20260507_085419_b5ae70af-e718-491b-9a17-47f938a05ab9.mp4",
-  "hf_20260507_085434_a1dbfed9-4014-4be6-b11f-6c4fea1436f1.mp4",
-  "hf_20260507_085500_061738bb-f6e2-43bd-8224-026697516bfe.mp4",
-  "hf_20260507_090418_6ff65e42-a6b8-406a-8c88-4bf2df3c7c66.mp4",
+  { title: "Missed calls", src: "/ads/edited/creative-01.mp4" },
+  { title: "Revenue leakage", src: "/ads/edited/creative-02.mp4" },
+  { title: "Always-on front desk", src: "/ads/edited/creative-03.mp4" },
+  { title: "Booking recovery", src: "/ads/edited/creative-04.mp4" },
+  { title: "Clinic growth system", src: "/ads/edited/creative-05.mp4" },
+  { title: "No-show reduction", src: "/ads/edited/creative-06.mp4" },
+  { title: "Review engine", src: "/ads/edited/creative-07.mp4" },
+  { title: "DM booking", src: "/ads/edited/creative-08.mp4" },
+  { title: "Reactivation", src: "/ads/edited/creative-09.mp4" },
+  { title: "Patient follow-up", src: "/ads/edited/creative-10.mp4" },
+  { title: "Speed to lead", src: "/ads/edited/creative-11.mp4" },
+  { title: "Clinic automation", src: "/ads/edited/creative-12.mp4" },
+  { title: "AI receptionist", src: "/ads/edited/creative-13.mp4" },
+  { title: "Front desk relief", src: "/ads/edited/creative-14.mp4" },
+  { title: "Booked appointments", src: "/ads/edited/creative-15.mp4" },
+  { title: "Growth operations", src: "/ads/edited/creative-16.mp4" },
+  { title: "Lead capture", src: "/ads/edited/creative-17.mp4" },
+  { title: "Demo CTA", src: "/ads/edited/creative-18.mp4" },
 ] as const;
 
 export const faqItems = [
