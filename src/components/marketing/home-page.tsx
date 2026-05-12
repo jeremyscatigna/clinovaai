@@ -393,41 +393,47 @@ export function HomePage() {
         <div className="container-wide">
           <div className="case-study-inner creative-gallery-shell">
             <div className="creative-gallery-header">
-              <div className="case-eyebrow reveal">Ad Creative Library</div>
+              <div className="case-eyebrow reveal">What Clinics Are Saying</div>
               <h2 className="reveal reveal-delay-1">
-                <em>The campaign</em>
+                <em>The problems</em>
                 <br />
-                in motion.
+                they already feel.
               </h2>
               <p className="reveal reveal-delay-2">
-                A mobile-first gallery of ClinovaAI launch creatives, built for Meta ads, Reels, and the way
-                clinic owners actually stop scrolling.
+                Short, social-first proof built around the objections clinic owners already recognise: missed
+                calls, slow replies, weak follow-up, no-shows, reviews, and revenue slipping before it reaches
+                the calendar.
               </p>
             </div>
 
             <div className="media-masonry reveal reveal-delay-2">
-                {adCreatives.map((creative, index) => (
-                  <div className="media-card" key={creative.src}>
-                    <div className="media-video-frame">
-                      <video
-                        src={creative.src}
-                        controls
-                        muted
-                        playsInline
-                        preload="none"
-                        aria-label={`ClinovaAI ad creative: ${creative.title}`}
-                      />
-                    </div>
-                    <div className="media-card-caption">
-                      <h3>{creative.title}</h3>
-                      <span>{String(index + 1).padStart(2, "0")}</span>
-                    </div>
+              {adCreatives.map((creative, index) => (
+                <div className="media-card" key={creative.src}>
+                  <div className="media-video-frame">
+                    <video
+                      src={creative.src}
+                      poster={creative.poster}
+                      controls
+                      controlsList="nodownload"
+                      muted
+                      playsInline
+                      preload="none"
+                      aria-label={`ClinovaAI social proof creative: ${creative.title}`}
+                    />
+                    <span className="media-play-badge" aria-hidden="true">
+                      Play
+                    </span>
                   </div>
-                ))}
+                  <div className="media-card-caption">
+                    <h3>{creative.title}</h3>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                  </div>
+                </div>
+              ))}
             </div>
 
             <div className="creative-gallery-cta reveal reveal-delay-3">
-              <BookingCta className="btn-primary" source="creative_gallery">
+              <BookingCta className="btn-primary" source="social_proof_gallery">
                 Book Your 15-Min Demo
               </BookingCta>
             </div>
