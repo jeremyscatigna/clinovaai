@@ -23,7 +23,7 @@ Important constraints:
 Primary booking URL:
 
 ```text
-https://api.leadconnectorhq.com/widget/booking/E6M09aZ0GebxIuwLiYnP
+https://api.leadconnectorhq.com/widget/bookings/lost-revenue-audit-9656
 ```
 
 ## Final Landing Page Structure
@@ -669,7 +669,7 @@ Purpose:
 Page structure:
 
 1. Short hero: "Book your 15-minute ClinovaAI demo"
-2. GoHighLevel booking widget embed for `https://api.leadconnectorhq.com/widget/booking/E6M09aZ0GebxIuwLiYnP`
+2. GoHighLevel booking widget embed for `https://api.leadconnectorhq.com/widget/bookings/lost-revenue-audit-9656`
 3. Three bullets: "We calculate leakage", "We map your system", "You get a clear next step"
 4. Trust strip: "No commitment · 15 minutes · 30-day guarantee"
 5. FAQ accordion below embed
@@ -874,7 +874,7 @@ META_ACCESS_TOKEN=
 META_DATASET_ID=
 META_TEST_EVENT_CODE=
 NEXT_PUBLIC_SITE_URL=https://clinovaai.co
-GHL_BOOKING_URL=https://api.leadconnectorhq.com/widget/booking/E6M09aZ0GebxIuwLiYnP
+GHL_BOOKING_URL=https://api.leadconnectorhq.com/widget/bookings/lost-revenue-audit-9656
 GHL_WEBHOOK_SIGNING_KEY=
 ```
 

@@ -6,7 +6,7 @@ Vercel is configured for site tracking:
 
 - `NEXT_PUBLIC_SITE_URL=https://clinovaai.co`
 - `NEXT_PUBLIC_META_PIXEL_ID=1889417841726527`
-- `GHL_BOOKING_URL=https://api.leadconnectorhq.com/widget/booking/E6M09aZ0GebxIuwLiYnP`
+- `GHL_BOOKING_URL=https://api.leadconnectorhq.com/widget/bookings/lost-revenue-audit-9656`
 
 The local Meta Ads CLI environment is installed at:
 

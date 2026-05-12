@@ -1,7 +1,7 @@
 export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://clinovaai.co";
 
 export const ghlBookingUrl =
-  process.env.GHL_BOOKING_URL ?? "https://api.leadconnectorhq.com/widget/booking/E6M09aZ0GebxIuwLiYnP";
+  process.env.GHL_BOOKING_URL ?? "https://api.leadconnectorhq.com/widget/bookings/lost-revenue-audit-9656";
 
 export const bookingPagePath = "/book-demo";
 
